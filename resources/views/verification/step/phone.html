@@ -1,0 +1,49 @@
+<div class="wizard-code-step">
+      <div class="wizard-step-header">
+        <h3><%= i18n.trans('code.title') %></h3>&nbsp;<a href="#" class="help" title="<%= i18n.trans('help') %>" tabindex="-1"></a>
+      </div>
+      <div class="wizard-step-content">
+        <div class="row">
+          <div class="phone-box">
+            <p class="summary"><%= i18n.trans('code.summary') %></p>
+            <select class="form-control country-list-mobile"></select>
+
+
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle country-button">
+                  <i class="flag"></i>&nbsp;<span class="country-code"></span>&nbsp;<span class="caret"></span>
+                </button> 
+                <ul class="dropdown-menu country-list">
+                  <li class="country-search">
+                    <input type="text" placeholder="<%= i18n.trans('code.search') %>" class="form-control country-search-input">
+                  </li>
+                </ul>
+              </div>
+              <input type="tel" maxlength="15" class="form-control phone-input">
+            </div>
+
+          </div>
+          <div class="method-selector">
+            <p class="method-summary"><%= i18n.trans('code.service.summary') %></p>
+            <div class="method-input">
+              <div class="radio">
+                <input type="radio" name="rc[core][method]" id="method-sms" value="sms" data-submit-button-value="<%= i18n.trans('code.submit.sms') %>">
+                <label for="method-sms">
+                  <i></i>&nbsp;<span><%= i18n.trans('code.service.sms.label') %></span>
+                </label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="rc[core][method]" id="method-voice" value="voice" data-submit-button-value="<%= i18n.trans('code.submit.voice') %>">
+                <label for="method-voice">
+                  <i></i>&nbsp;<span><%= i18n.trans('code.service.voice.label') %></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="submit-button">
+            <button type="button" class="btn btn-submit btn-block js-send-code"></button>
+          </div>
+        </div>
+      </div>
+    </div>

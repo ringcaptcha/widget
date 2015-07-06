@@ -1,0 +1,18 @@
+$widget-width-base: 352px;
+$widget-height-base: 175px;
+
+$widget-padding-left-base: 16px;
+$widget-padding-top-base: 12px;
+$widget-padding-base: $widget-padding-top-base $widget-padding-left-base;
+
+$text-color: #394f5a;
+
+$link-color: $text-color;
+$link-hover-color: darken($link-color, 15%);
+
+$screen-md-min: $widget-width-base;
+
+$grid-columns: 6;
+$grid-gutter-width: 0;
+
+$brand-danger: #c8362e;

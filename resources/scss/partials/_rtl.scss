@@ -1,0 +1,33 @@
+.summary,
+.wizard-step-header,
+.phone-input,
+.method-summary,
+.method-input,
+.country-search-input,
+.modal-title,
+.modal-body,
+.modal-footer {
+	text-align: right;
+}
+
+.method-input {
+	padding-right: 20px;
+}
+
+.country-list li:not(.country-search) a {
+	text-align: right;
+}
+
+.label {
+	float: right;
+	margin-left: 3px;
+}
+
+.close,
+.help {
+	float: left;
+}
+
+.ringcaptcha.widget th {
+	text-align: right!important;
+}

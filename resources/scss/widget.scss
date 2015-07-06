@@ -1,0 +1,130 @@
+@import "compass";
+
+@import "variables";
+@import "mixins";
+
+@import "modules/variables";
+@import "modules/mixins";
+@import "partials/typography";
+
+.ringcaptcha.widget {
+
+  background-color: #fff;
+  border: 1px solid #e1e6e7;
+  max-width: 352px;
+  min-height: $widget-height-base;
+  padding: $widget-padding-base;
+  position: relative;
+  font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+  text-align: left;
+
+  @include border-radius($border-radius-base);
+  @include box-sizing(border-box);
+
+  * {
+    float: none;
+  }
+
+  &.overflow {
+    overflow: hidden;
+  }
+
+  &.no-brand .wizard-step-header {
+    width: 100%!important;
+  }
+
+  &.onboarding {
+    border: none;
+    padding: 0;
+    max-width: 358px;
+    min-height: 0;
+    background-color: transparent;
+    font-size: 16.8px;
+
+    .wizard-step-content {
+      margin: 0!important;
+    }
+
+    .btn-submit {
+      border: none;
+      height: 28px;
+      width: 110px;
+      font-size: 16.8px;
+    }
+
+    .phone-input {
+      border-right: none;
+    }
+
+    .phone-box {
+      margin: 0 0 10px 0!important;
+    }
+
+    .phone-input[disabled] {
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.65;
+      filter: alpha(opacity=65);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .btn[disabled] {
+      border-color: #DFE4E6;
+    }
+  }
+
+  @import "partials/reset";
+
+  @import "normalize";
+  @import "buttons";
+  @import "close";
+  @import "forms";
+  @import "dropdowns";
+  @import "grid";
+  @import "tables";
+  @import "labels";
+  @import "type";
+  @import "input-groups";
+  @import "modals";
+  @import "utilities";
+
+  @import "partials/desktop";
+
+  &[dir="rtl"] {
+    @import "partials/rtl";
+  }
+
+  @media (max-width: 500px - 1px) {
+
+    padding: 0;
+    border: none;
+
+    &.onboarding {
+      max-width: 240px!important;
+
+      .phone-box .form-group {
+        float: none!important;
+        display: block!important;
+      }
+
+      .js-send-code {
+        float: none!important;
+      }
+
+      .button-wrapper {
+        text-align: center;
+      }
+
+      .notification-text {
+        width: 200px;
+      }
+    }
+
+    @import "partials/mobile";
+  }
+
+}

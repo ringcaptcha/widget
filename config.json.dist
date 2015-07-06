@@ -1,0 +1,15 @@
+{
+  "aws": {
+    "key": "my_public_key",
+    "secret": "my_secret_key",
+    "region": "us-standard",
+    "s3": {
+      "bucket": "widget",
+      "path": "/"
+    }
+  },
+  "widget": {
+    "api": "http://api.ringcaptcha.com",
+    "cdn": "http://mycdn.com"
+  }
+}

@@ -1,0 +1,168 @@
+{
+    "direction": "ltr",
+    "messages": {
+        "widget.help": "Aiuto",
+        "widget.code.title": "Verificare il tuo numero di telefono",
+        "widget.code.summary": "Vi invieremo un codice PIN per verificare il vostro telefono.",
+        "widget.code.error.invalid_number": "Il tuo numero di telefono non è valido. Si prega di riprovare.",
+        "widget.code.error.country_not_supported": "Il vostro paese non è supportato. Provare Di Nuovo.",
+        "widget.code.error.invalid_number_length": "La vostra lunghezza del numero di telefono non è valido. Provare Di Nuovo.",
+        "widget.code.error.max_attempts_reached": "Hai raggiunto il numero massimo di tentativi.",
+        "widget.code.service.summary": "Ricevi il codice di verifica:",
+        "widget.code.service.sms.summary": "Si riceverà un codice di verifica tramite messaggio di testo (SMS)",
+        "widget.code.service.sms.label": "Testo (SMS)",
+        "widget.code.service.voice.summary": "Si riceverà un codice di verifica tramite chiamata vocale",
+        "widget.code.service.voice.label": "Chiamata Vocale",
+        "widget.code.search": "La Ricerca Di Paese",
+        "widget.code.submit.sms": "Inviare",
+        "widget.code.submit.voice": "Chiamata",
+        "widget.code.example": "ad esempio, %example%",
+        "widget.check.title.sms": "Sms con il tuo codice PIN:",
+        "widget.check.title.voice": "Chiamata con il proprio codice PIN:",
+        "widget.check.summary": "Inserisci il 4 PIN codice di verifica",
+        "widget.check.error.invalid_pin_code": "Non valido codice PIN",
+        "widget.check.help": "Inserito un numero sbagliato o ha bisogno di un nuovo codice?",
+        "widget.check.countdown.seconds": "Riprovare in %remaining% secondo.|Riprovare in %remaining% secondo.",
+        "widget.check.countdown.minutes": "Riprovare in %remaining% minuto.|Riprovare in %remaining% minuto.",
+        "widget.check.retry": "Provare Di Nuovo",
+        "widget.check.fallback": "Chiamami adesso",
+        "widget.check.success": "Grazie! Il telefono è stato verificato!",
+        "widget.onboarding.success": "Grazie! Un link è stato inviato al tuo telefono.",
+        "widget.onboarding.send": "Salire A Bordo",
+        "widget.onboarding.retry": "Non ricevere un link?",
+        "widget.error.country_not_supported": "Paese non supportato",
+        "widget.error.invalid_number_length": "Non sembra un numero di telefono valido",
+        "widget.error.invalid_app_key": "Non Valido App Chiave",
+        "widget.error.direct_api_access_not_available": "Diretta API di accesso non disponibile",
+        "widget.error.web_access_not_available": "Accesso Web non disponibile",
+        "widget.error.invalid_api_access": "Non valido l'accesso alle API",
+        "widget.error.wait_to_retry": "Aspettare per riprovare",
+        "widget.error.invalid_number": "Non sembra un numero di telefono valido",
+        "widget.error.invalid_site_key": "Voci chiave del Sito",
+        "widget.error.invalid_session": "Sessione Non Valido",
+        "widget.error.max_attempts_reached": "Max tenta raggiunto",
+        "widget.error.invalid_service": "Servizio non valido",
+        "widget.error.instant_validation_not_available": "La convalida immediata non disponibile",
+        "widget.error.invalid_parameters": "I parametri non validi",
+        "widget.error.invalid_pin_code": "Non valido codice PIN",
+        "widget.error.session_expired": "Sessione scaduta",
+        "widget.error.not_authorized": "Non Autorizzato",
+        "widget.error.url_validation_not_available": "La convalida degli Url non disponibile",
+        "widget.error.unknown_error": "Errore sconosciuto",
+        "widget.error.max_validations_reached": "Max convalide raggiunto",
+        "widget.error.out_of_credits": "Opps.. non Abbiamo potuto verificare il tuo telefono cellulare.",
+        "help.instructions.title": "Istruzioni",
+        "help.instructions.text.one": "Hai quasi finito. Si prega di verificare la tua identità, confermando il telefono. Ti testo è un codice di conferma.",
+        "help.instructions.text.two": "Si prega di selezionare il codice del paese (ad esempio, 1 per gli USA\/Canada) e inserisci il tuo numero di telefono senza caratteri speciali. Se il numero inizia con uno zero, assicurarsi di rimuovere anche eventuali zeri iniziali.",
+        "help.instructions.text.three": "Dopo aver immesso un numero di telefono valido, ti invieremo un messaggio di testo o una chiamata vocale con un codice di verifica.",
+        "help.instructions.text.four": "Una volta immesso il codice sul sito, che per confermare la vostra identità.",
+        "help.summary.title": "Riepilogo",
+        "help.summary.text.one": "Assicurarsi che si digita il tuo numero in formato internazionale.",
+        "help.summary.text.two": "Per esempio il numero di 123-4567 in area di codice 408 sarebbe scritto come 4081234567 (1 è il codice del paese).",
+        "help.learn.title": "Saperne Di Più",
+        "help.learn.text": "Questo sito utilizza i test di sicurezza per garantire che le persone che sul sito sono reali. Così facendo, aiuta a prevenire programmi automatici di abusare di questo servizio e la creazione di un più affidabile comunità.",
+        "help.details.title": "Dettagli",
+        "help.details.text.one": "I motivi più comuni che le persone non possono verificare il numero di telefono può quasi sempre essere risolto con un doppio controllo di alcuni dettagli importanti.",
+        "help.details.text.two": "Per completare il processo di verifica, si prega di verificare che:",
+        "help.details.list": [
+            "Hai inserito il tuo numero di telefono correttamente nel formato internazionale completo.",
+            "Il telefono cellulare è collegato a un operatore di rete con un segnale forte.",
+            "Non si è in roaming.",
+            "È possibile inviare e ricevere messaggi SMS.",
+            "È possibile ricevere chiamate.",
+            "Di aver rimosso eventuali 0 iniziali o qualsiasi codici di chiamata speciali."
+        ],
+        "help.note.title": "Nota speciale per alcuni paesi:",
+        "help.note.text.one": "Per verificare i numeri di telefono cellulare nel regno UNITO, il numero di telefono 07981555555, si avrebbe:",
+        "help.note.text.two": "Tutti Argentino numeri di telefono (+54) dovrebbe avere un 9 tra il codice del paese e il codice di zona, come questo: +54 9 xxx xxx xxx xxx xxx xxx xxx xxx xxx xxx xxxx",
+        "help.note.text.three": "Messicano numeri di telefono cellulare è necessario disporre di un 1 dopo il +52, anche se sono Nextel numeri.",
+        "help.note.list": [
+            "Lasciare fuori lo 0 iniziale.",
+            "Aggiungere un segno per l'inizio.",
+            "Aggiungere il codice del paese.",
+            "Alla fine, il numero è +447981555555."
+        ],
+        "help.country": "Paese",
+        "help.number_example": "Esempio Di Numero",
+        "help.examples_info.tip": "I numeri a destra sono solo esempi per aiutarvi a formattare i messaggi correttamente. Si prega di verificare il numero prima di utilizzare il nostro sistema. Siete pregati di notare che l'area di codice non si applicano per i numeri di cellulare.",
+        "help.examples_info.learn_more": "Saperne di più su questo formato, qui",
+        "help.examples": [
+            {
+                "country": "Regno UNITO",
+                "phone": {
+                    "country_code": "+44",
+                    "area_code": "775",
+                    "number": "3455323"
+                }
+            },
+            {
+                "country": "USA",
+                "phone": {
+                    "country_code": "+1",
+                    "area_code": "415",
+                    "number": "2343344"
+                }
+            },
+            {
+                "country": "Cina",
+                "phone": {
+                    "country_code": "+86",
+                    "area_code": "131",
+                    "number": "33443322"
+                }
+            },
+            {
+                "country": "Argentina",
+                "phone": {
+                    "country_code": "+54",
+                    "area_code": "11",
+                    "number": "4444444"
+                }
+            },
+            {
+                "country": "Filippine",
+                "phone": {
+                    "country_code": "+63",
+                    "area_code": "19",
+                    "number": "33443322"
+                }
+            },
+            {
+                "country": "Etiopia",
+                "phone": {
+                    "country_code": "+251",
+                    "area_code": "911",
+                    "number": "4433222"
+                }
+            },
+            {
+                "country": "Spagna",
+                "phone": {
+                    "country_code": "+34",
+                    "area_code": "618",
+                    "number": "4444444"
+                }
+            }
+        ],
+        "help.examples_summary": [
+            {
+                "color": "Arancione",
+                "type": "warning",
+                "description": "indica il codice del paese (si prega di vedere sotto per la lista completa)"
+            },
+            {
+                "color": "Verde",
+                "type": "success",
+                "description": "indica il codice di zona (si prega di notare che gli zeri iniziali DEVE essere rimosso)"
+            },
+            {
+                "color": "Blu",
+                "type": "primary",
+                "description": "rappresenta il numero di telefono locale"
+            }
+        ],
+        "help.footer": "Non facciamo pagare per questo servizio. Messaggio Standard e dati possono essere applicate tariffe. Ancora bisogno di aiuto?",
+        "help.contact": "Contattaci",
+        "help.back": "Tornare indietro"
+    }
+}

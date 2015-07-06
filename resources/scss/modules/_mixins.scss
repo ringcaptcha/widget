@@ -1,0 +1,6 @@
+@mixin sprite($position: false) {
+  background: image-url('sprite.png') no-repeat;
+  @if $position {
+    background-position: $position;
+  }
+}

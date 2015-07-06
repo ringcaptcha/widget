@@ -1,0 +1,168 @@
+{
+    "direction": "ltr",
+    "messages": {
+        "widget.help": "Helfen",
+        "widget.code.title": "Überprüfen Sie Ihre Telefonnummer",
+        "widget.code.summary": "Wir senden Ihnen einen PIN-code stellen Sie sicher, Ihr Telefon.",
+        "widget.code.error.invalid_number": "Ihre Telefonnummer ist ungültig. Bitte versuchen Sie es erneut.",
+        "widget.code.error.country_not_supported": "Ihr Land wird nicht unterstützt. Versuchen Sie Es Erneut.",
+        "widget.code.error.invalid_number_length": "Ihre Telefonnummer Länge ist ungültig. Versuchen Sie Es Erneut.",
+        "widget.code.error.max_attempts_reached": "Sie erreichte max-versuche.",
+        "widget.code.service.summary": "Erhalten Sie Bestätigungscode per:",
+        "widget.code.service.sms.summary": "Sie erhalten eine Bestätigungs-code per Kurzmitteilung (SMS)",
+        "widget.code.service.sms.label": "Text - (SMS -)",
+        "widget.code.service.voice.summary": "Sie erhalten eine Bestätigungs-code per Sprachanruf",
+        "widget.code.service.voice.label": "Voice Call",
+        "widget.code.search": "Suche Land",
+        "widget.code.submit.sms": "Senden",
+        "widget.code.submit.voice": "Rufen",
+        "widget.code.example": "z.B. %example%",
+        "widget.check.title.sms": "SMS mit dem PIN-code zu:",
+        "widget.check.title.voice": "Aufruf mit Ihrem PIN-code zu:",
+        "widget.check.summary": "Geben Sie 4-PIN-code zu überprüfen",
+        "widget.check.error.invalid_pin_code": "Ungültige PIN-code",
+        "widget.check.help": "Betrat die falsche Nummer oder brauchen Sie einen neuen code?",
+        "widget.check.countdown.seconds": "Versuchen Sie es erneut in %remaining% Sekunde.|Versuchen Sie es erneut in %remaining% Sekunde.",
+        "widget.check.countdown.minutes": "Versuchen Sie es erneut in %remaining% minute.|Versuchen Sie es erneut in %remaining% minute.",
+        "widget.check.retry": "Versuchen Sie Es Erneut",
+        "widget.check.fallback": "Rufen Sie mich jetzt",
+        "widget.check.success": "Danke! Ihr Telefon wurde überprüft!",
+        "widget.onboarding.success": "Danke! Ein link wurde an Ihr Handy gesendet.",
+        "widget.onboarding.send": "Holen Sie Sich An Bord",
+        "widget.onboarding.retry": "Nicht erhalten Sie einen link?",
+        "widget.error.country_not_supported": "Land nicht unterstützt",
+        "widget.error.invalid_number_length": "Sieht nicht aus wie eine gültige Telefonnummer",
+        "widget.error.invalid_app_key": "Ungültige App Key",
+        "widget.error.direct_api_access_not_available": "Direkte API-Zugriff nicht verfügbar",
+        "widget.error.web_access_not_available": "Web-Zugriff nicht verfügbar",
+        "widget.error.invalid_api_access": "Ungültige API-Zugriff",
+        "widget.error.wait_to_retry": "Warten Sie zu wiederholen",
+        "widget.error.invalid_number": "Sieht nicht aus wie eine gültige Telefonnummer",
+        "widget.error.invalid_site_key": "Ungültige Site-Schlüssel",
+        "widget.error.invalid_session": "Ungültige Sitzung",
+        "widget.error.max_attempts_reached": "Max versucht erreicht",
+        "widget.error.invalid_service": "Ungültige service",
+        "widget.error.instant_validation_not_available": "Sofortige Validierung nicht verfügbar",
+        "widget.error.invalid_parameters": "Ungültige Parameter",
+        "widget.error.invalid_pin_code": "Ungültige PIN-code",
+        "widget.error.session_expired": "Sitzung abgelaufen",
+        "widget.error.not_authorized": "Nicht Berechtigt",
+        "widget.error.url_validation_not_available": "Url-überprüfung nicht verfügbar",
+        "widget.error.unknown_error": "Unbekannter Fehler",
+        "widget.error.max_validations_reached": "Max Validierungen erreicht",
+        "widget.error.out_of_credits": "Upps.. konnten Wir nicht überprüfen Sie Ihre Handy.",
+        "help.instructions.title": "Anweisungen",
+        "help.instructions.text.one": "Sie sind fast fertig. Bitte überprüfen Sie Ihre Identität bestätigt, indem Sie Ihr Telefon. Wir werden text, den Sie eine Bestätigungs-code.",
+        "help.instructions.text.two": "Bitte wählen Sie Ihr Land code (z.B. 1 für USA\/Kanada), und geben Sie Ihre Telefonnummer ohne Sonderzeichen. Wenn Ihre Zahl mit einer null beginnt, stellen Sie sicher, entfernen Sie auch alle führenden Nullen.",
+        "help.instructions.text.three": "Nachdem Sie geben Sie eine gültige Telefonnummer ein, wir senden Ihnen eine SMS oder ein Anruf mit einem Bestätigungscode.",
+        "help.instructions.text.four": "Sobald Sie geben Sie diesen code auf der Website, wird Ihre Identität bestätigt.",
+        "help.summary.title": "Zusammenfassung",
+        "help.summary.text.one": "Sicherzustellen, dass Sie geben Sie Ihre Telefonnummer im internationalen format.",
+        "help.summary.text.two": "Zum Beispiel die US-Nummer 123-4567 im Bereich code 408 geschrieben würde, als 4081234567 (1 ist die country-code).",
+        "help.learn.title": "Erfahren Sie Mehr",
+        "help.learn.text": "Diese Website verwendet Sicherheits-tests, um sicherzustellen, dass die Menschen auf der Seite sind echt. Dabei hilft zu verhindern, dass automatisierte Programme von Missbrauch dieses Dienstes und die Schaffung einer verlässlichen Gemeinschaft.",
+        "help.details.title": "Details",
+        "help.details.text.one": "Die häufigsten Gründe, dass die Menschen nicht überprüfen Sie Ihre Handy-Nummer kann fast immer gelöst werden, indem der doppelten Kontrolle ein paar wichtige details.",
+        "help.details.text.two": "Um die vollständige überprüfung, überprüfen Sie bitte:",
+        "help.details.list": [
+            "Die von Ihnen eingegebene Telefonnummer richtig in die vollen internationalen format.",
+            "Ihr Handy ist mit einem mobilen Netz mit einem starken signal.",
+            "Sie sind nicht-roaming.",
+            "Sie können senden und empfangen von SMS-Nachrichten.",
+            "Sie können Anrufe empfangen.",
+            "Sie entfernt alle führenden 0 oder jede Besondere Berufung codes."
+        ],
+        "help.note.title": "Besonderer Hinweis für bestimmte Länder:",
+        "help.note.text.one": "Um zu überprüfen, Handy-Nummern in Großbritannien mit der Telefonnummer 07981555555, Sie würde:",
+        "help.note.text.two": "Alle argentinischen Handy-Nummern (+54) soll eine 9 zwischen der Landes-und Ortsvorwahl, wie dieses: +54 9 xxx xxx xxxx",
+        "help.note.text.three": "Mexikanische Handy-Nummern benötigen ein 1 nach +52, auch wenn Sie Nextel zahlen.",
+        "help.note.list": [
+            "Lassen Sie sich die führende 0.",
+            "Fügen Sie ein plus an den Anfang.",
+            "Fügen Sie den Ländercode.",
+            "Am Ende der Nummer +447981555555."
+        ],
+        "help.country": "Land",
+        "help.number_example": "Anzahl Beispiel",
+        "help.examples_info.tip": "Die zahlen auf der rechten Seite sind nur Beispiele, um zu helfen, die Sie formatieren Sie Ihre Nachrichten korrekt. Bitte überprüfen Sie die Nummer, bevor Sie über unser system. Bitte beachten Sie, dass der Bereich code Mai gelten nicht für die Handy-Nummern.",
+        "help.examples_info.learn_more": "Erfahren Sie mehr über dieses format hier",
+        "help.examples": [
+            {
+                "country": "UK",
+                "phone": {
+                    "country_code": "+44",
+                    "area_code": "775",
+                    "number": "3455323"
+                }
+            },
+            {
+                "country": "USA",
+                "phone": {
+                    "country_code": "+1",
+                    "area_code": "415",
+                    "number": "2343344"
+                }
+            },
+            {
+                "country": "China",
+                "phone": {
+                    "country_code": "+86",
+                    "area_code": "131",
+                    "number": "33443322"
+                }
+            },
+            {
+                "country": "Argentinien",
+                "phone": {
+                    "country_code": "+54",
+                    "area_code": "11",
+                    "number": "4444444"
+                }
+            },
+            {
+                "country": "Philippinen",
+                "phone": {
+                    "country_code": "+63",
+                    "area_code": "19",
+                    "number": "33443322"
+                }
+            },
+            {
+                "country": "Äthiopien",
+                "phone": {
+                    "country_code": "+251",
+                    "area_code": "911",
+                    "number": "4433222"
+                }
+            },
+            {
+                "country": "Spanien",
+                "phone": {
+                    "country_code": "+34",
+                    "area_code": "618",
+                    "number": "4444444"
+                }
+            }
+        ],
+        "help.examples_summary": [
+            {
+                "color": "Orange",
+                "type": "warning",
+                "description": "zeigt an Land code (bitte sehen Sie unten die vollständige Liste)"
+            },
+            {
+                "color": "Grün",
+                "type": "success",
+                "description": "zeigt an, area-code (bitte beachten Sie, dass führende Nullen entfernt werden MUSS)"
+            },
+            {
+                "color": "Blau",
+                "type": "primary",
+                "description": "stellt lokale Telefonnummer"
+            }
+        ],
+        "help.footer": "Wir berechnen für diesen service. Standard-Nachricht und Daten Tarife gelten. Benötigen Sie noch Hilfe?",
+        "help.contact": "Kontaktieren Sie Uns",
+        "help.back": "Gehen Sie zurück"
+    }
+}

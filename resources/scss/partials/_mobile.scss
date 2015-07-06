@@ -1,0 +1,69 @@
+.brand {
+  position: static;
+  margin-bottom: 10px;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.wizard-step-header {
+  text-align: center;
+}
+
+.method-selector {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.method-summary {
+	padding: 0;
+}
+
+p {
+  text-align: center;
+}
+
+.modal-body {
+
+	h3 {
+		text-align: center;
+	}
+
+  .left-box {
+    padding: 0;
+  }
+
+  .right-box {
+    padding: 0;
+  }
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.country-list-mobile {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.method-summary {
+  padding-right: 0!important;
+}
+
+.country-button {
+  display: none;
+}
+
+.phone-input {
+  @include border-radius(4px)
+}
+
+.input-group {
+  width: 100%;
+}
+
+label[for="method-voice"] {
+  margin-right: 0!important;
+}

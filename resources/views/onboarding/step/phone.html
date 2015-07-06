@@ -1,0 +1,32 @@
+<div class="wizard-code-step">
+  <div class="wizard-step-content">
+    <div class="row">
+      <div class="phone-box">
+        <select class="form-control country-list-mobile"></select>
+        <p class="summary popup hide"></p>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle country-button">
+                  <i class="flag"></i>&nbsp;<span class="country-code"></span>&nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu country-list">
+                  <li class="country-search">
+                    <input type="text" placeholder="<%= i18n.trans('code.search') %>" class="form-control country-search-input">
+                  </li>
+                </ul>
+              </div>
+              <input type="tel" maxlength="15" class="form-control phone-input">
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-submit js-send-code"></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <p id="js-inline-alert" class="text-center">We'll text you a link to download the app</p>
+      <p id="js-inline-countdown" class="text-center hide"><%= i18n.trans('onboarding.retry') %>&nbsp;<span class="countdown hide"></span><span class="tryagain hide"><a href="#" class="js-try-again" style="font-weight:bold;"><%= i18n.trans('check.retry') %></a></span></p>
+    </div>
+  </div>
+</div>

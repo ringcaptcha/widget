@@ -1,9 +1,22 @@
 {
   "name": "ringcaptcha-widget",
-  "description": "",
-  "keywords": ["ringcaptcha", "widget", "verification", "onboard"],
-  "homepage": "https://github.com/ringcaptcha/widget",
-  "license": "Apache-2.0",
+  "author": "Diego Saint Esteben <diego@ringcaptcha.com>",
+  "scripts": {
+    "build": "./node_modules/.bin/grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ringcaptcha/widget"
+  },
+  "bugs": {
+    "url": "https://github.com/ringcaptcha/widget/issues"
+  },
+  "keywords": [
+    "ringcaptcha",
+    "widget",
+    "verification",
+    "onboard"
+  ],
   "dependencies": {
     "cssify": "^0.4.2"
   },
@@ -26,8 +39,5 @@
     "underscore": "^1.6.0",
     "grunt-s3": "~0.2.0-alpha.3"
   },
-  "scripts": {
-    "build": "./node_modules/.bin/grunt build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "license": "Apache-2.0"
 }

@@ -73,8 +73,8 @@ class PhoneStep
   ###
   render = ->
 
-    onboarding_template = require("../../resources/views/onboarding/step/phone.html")
-    verification_template = require("../../resources/views/verification/step/phone.html")
+    onboarding_template = require("../../resources/views/onboarding/step/phone.hbs")
+    verification_template = require("../../resources/views/verification/step/phone.hbs")
 
     template = if (mode is 'onboarding' or mode is 'distribution') then onboarding_template else verification_template
 

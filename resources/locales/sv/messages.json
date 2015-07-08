@@ -1,168 +1,55 @@
 {
     "direction": "ltr",
     "messages": {
-        "widget.help": "Hjälp",
-        "widget.code.title": "Kontrollera dina telefonnummer",
-        "widget.code.summary": "Vi kommer att skicka dig en PIN-kod för att verifiera din telefon.",
-        "widget.code.error.invalid_number": "Ditt telefonnummer är ogiltig. Var god försök igen.",
-        "widget.code.error.country_not_supported": "Ditt land stöds inte. Försök Igen.",
-        "widget.code.error.invalid_number_length": "Ditt telefonnummer längd är ogiltig. Försök Igen.",
-        "widget.code.error.max_attempts_reached": "Du har nått max antal försök.",
-        "widget.code.service.summary": "Få kontroll koden genom att:",
-        "widget.code.service.sms.summary": "Du kommer att få en verifieringskod via sms (SMS)",
-        "widget.code.service.sms.label": "Textmeddelanden (SMS)",
-        "widget.code.service.voice.summary": "Du kommer att få en verifieringskod via telefonsamtal",
-        "widget.code.service.voice.label": "Samtal",
-        "widget.code.search": "Sök Land",
-        "widget.code.submit.sms": "Skicka",
-        "widget.code.submit.voice": "Samtal",
-        "widget.code.example": "exempel %example%",
-        "widget.check.title.sms": "Skicka sms med din PIN-kod till:",
-        "widget.check.title.voice": "Du ringer med din PIN-kod till:",
-        "widget.check.summary": "Ange 4 PIN-kod för att verifiera",
-        "widget.check.error.invalid_pin_code": "Ogiltig PIN-kod",
-        "widget.check.help": "Matat in fel nummer eller behöver en ny kod?",
-        "widget.check.countdown.seconds": "Försök igen om %remaining% sekund.|Försök igen om %remaining% sekund.",
-        "widget.check.countdown.minutes": "Försök igen om %remaining% minut.|Försök igen om %remaining% minut.",
-        "widget.check.retry": "Försök Igen",
-        "widget.check.fallback": "Ring mig nu",
-        "widget.check.success": "Tack! Telefonen har verifierats!",
-        "widget.onboarding.success": "Tack! En länk har skickats till din telefon.",
-        "widget.onboarding.send": "Få Ombord",
-        "widget.onboarding.retry": "Inte att få en länk?",
-        "widget.error.country_not_supported": "Land som inte stöds",
-        "widget.error.invalid_number_length": "Ser inte ut som ett giltigt telefonnummer",
-        "widget.error.invalid_app_key": "Ogiltiga App Nyckel",
-        "widget.error.direct_api_access_not_available": "Direkt API-åtkomst inte tillgängligt",
-        "widget.error.web_access_not_available": "Web access inte tillgängligt",
-        "widget.error.invalid_api_access": "Ogiltiga API-åtkomst",
-        "widget.error.wait_to_retry": "Vänta med att försöka igen",
-        "widget.error.invalid_number": "Ser inte ut som ett giltigt telefonnummer",
-        "widget.error.invalid_site_key": "Ogiltiga Site key",
-        "widget.error.invalid_session": "Ogiltig Session",
-        "widget.error.max_attempts_reached": "Max försök nått",
-        "widget.error.invalid_service": "Ogiltiga service",
-        "widget.error.instant_validation_not_available": "Instant validering inte tillgängligt",
-        "widget.error.invalid_parameters": "Ogiltiga parametrar",
-        "widget.error.invalid_pin_code": "Ogiltig PIN-kod",
-        "widget.error.session_expired": "Sessionen gått ut",
-        "widget.error.not_authorized": "Inte Auktoriserad",
-        "widget.error.url_validation_not_available": "Url validering inte tillgängligt",
-        "widget.error.unknown_error": "Okänt fel",
-        "widget.error.max_validations_reached": "Max valideringar nått",
-        "widget.error.out_of_credits": "Opps.. Vi kunde inte verifiera din mobiltelefon.",
-        "help.instructions.title": "Instruktioner",
-        "help.instructions.text.one": "Du är nästan klar. Vänligen verifiera din identitet genom att bekräfta din telefon. Vi ska sms: a dig en bekräftelse kod.",
-        "help.instructions.text.two": "Var god välj ditt land-kod (t ex 1 för USA\/Kanada) och ange ditt telefonnummer utan några specialtecken. Om numret börjar med en nolla, se till att du även ta bort alla inledande nollor.",
-        "help.instructions.text.three": "När du har skrivit in ett giltigt nummer kommer vi att skicka ett sms eller ett samtal med en verifieringskod.",
-        "help.instructions.text.four": "När du skriver in denna kod på webbplatsen, som kommer att bekräfta din identitet.",
-        "help.summary.title": "Sammanfattning",
-        "help.summary.text.one": "Se till att du skriver in ditt nummer i internationellt format.",
-        "help.summary.text.two": "Till exempel den AMERIKANSKA antalet 123-4567 riktnummer 408 skulle skrivas som 4081234567 (1 är landskoden).",
-        "help.learn.title": "Läs Mer",
-        "help.learn.text": "Denna webbplats använder säkerhet tester för att se till att människor på webbplatsen är riktig. Detta hjälper till att förhindra automatiserade program från att missbruka denna tjänst och skapa en mer tillförlitlig gemenskapen.",
-        "help.details.title": "Detaljer",
-        "help.details.text.one": "De vanligaste anledningarna till att människor inte kan kontrollera sitt telefonnummer kan nästan alltid lösas genom att dubbel kolla några viktiga detaljer.",
-        "help.details.text.two": "För att slutföra verifieringen, vänligen kontrollera att:",
-        "help.details.list": [
-            "Du har angett ditt telefonnummer på rätt sätt i internationellt format.",
-            "Din mobiltelefon är ansluten till en mobil operatör nätverk med stark signal.",
-            "Du är inte roaming.",
-            "Du kan skicka och ta emot SMS-meddelanden.",
-            "Du kan ta emot telefonsamtal.",
-            "Du har tagit bort alla ledande 0 eller någon speciell kallelse koder."
-        ],
-        "help.note.title": "Särskild anmärkning för vissa länder:",
-        "help.note.text.one": "För att kontrollera mobilnummer i STORBRITANNIEN med telefonnummer 07981555555, skulle du:",
-        "help.note.text.two": "Alla Argentinska mobilnummer (+54) bör ha en 9 mellan landskod och riktnummer, som den här: +54 9 xxx xxx xxxx",
-        "help.note.text.three": "Mexikansk mobilnummer behöver ha en 1 efter +52, även om de är Nextel nummer.",
-        "help.note.list": [
-            "Lämna ut de ledande 0-talet.",
-            "Lägga till ett plus i början.",
-            "Lägg till landskoden.",
-            "I slutändan är det antalet skulle vara +447981555555."
-        ],
-        "help.country": "Landet",
-        "help.number_example": "Antalet Exempel",
-        "help.examples_info.tip": "Siffrorna till höger är bara exempel för att hjälpa dig att formatera dina meddelanden korrekt. Vänligen bekräfta numret innan du använder vårt system. Observera att området koden får inte tillämpas för mobilnummer.",
-        "help.examples_info.learn_more": "Läs mer om detta format här",
-        "help.examples": [
-            {
-                "country": "STORBRITANNIEN",
-                "phone": {
-                    "country_code": "+44",
-                    "area_code": "775",
-                    "number": "3455323"
-                }
-            },
-            {
-                "country": "USA",
-                "phone": {
-                    "country_code": "+1",
-                    "area_code": "415",
-                    "number": "2343344"
-                }
-            },
-            {
-                "country": "Kina",
-                "phone": {
-                    "country_code": "+86",
-                    "area_code": "131",
-                    "number": "33443322"
-                }
-            },
-            {
-                "country": "Argentina",
-                "phone": {
-                    "country_code": "+54",
-                    "area_code": "11",
-                    "number": "4444444"
-                }
-            },
-            {
-                "country": "Filippinerna",
-                "phone": {
-                    "country_code": "+63",
-                    "area_code": "19",
-                    "number": "33443322"
-                }
-            },
-            {
-                "country": "Etiopien",
-                "phone": {
-                    "country_code": "+251",
-                    "area_code": "911",
-                    "number": "4433222"
-                }
-            },
-            {
-                "country": "Spanien",
-                "phone": {
-                    "country_code": "+34",
-                    "area_code": "618",
-                    "number": "4444444"
-                }
-            }
-        ],
-        "help.examples_summary": [
-            {
-                "color": "Orange",
-                "type": "warning",
-                "description": "anger landsnummer (se nedan för fullständig lista)"
-            },
-            {
-                "color": "Grön",
-                "type": "success",
-                "description": "visar riktnummer (observera att inledande nollor MÅSTE tas bort)"
-            },
-            {
-                "color": "Blå",
-                "type": "primary",
-                "description": "representerar lokala telefonnummer"
-            }
-        ],
-        "help.footer": "Vi tar inte betalt för denna tjänst. Standard meddelande och data priser kan gälla. Behöver du hjälp?",
-        "help.contact": "Kontakta Oss",
-        "help.back": "Gå tillbaka"
+        "help": "Hjälp",
+        "code.title": "Kontrollera dina telefonnummer",
+        "code.summary": "Vi kommer att skicka dig en PIN-kod för att verifiera din telefon.",
+        "code.error.invalid_number": "Ditt telefonnummer är ogiltig. Var god försök igen.",
+        "code.error.country_not_supported": "Ditt land stöds inte. Försök Igen.",
+        "code.error.invalid_number_length": "Ditt telefonnummer längd är ogiltig. Försök Igen.",
+        "code.error.max_attempts_reached": "Du har nått max antal försök.",
+        "code.service.summary": "Få kontroll koden genom att:",
+        "code.service.sms.summary": "Du kommer att få en verifieringskod via sms (SMS)",
+        "code.service.sms.label": "Textmeddelanden (SMS)",
+        "code.service.voice.summary": "Du kommer att få en verifieringskod via telefonsamtal",
+        "code.service.voice.label": "Samtal",
+        "code.search": "Sök Land",
+        "code.submit.sms": "Skicka",
+        "code.submit.voice": "Samtal",
+        "code.example": "exempel %example%",
+        "check.title.sms": "Skicka sms med din PIN-kod till:",
+        "check.title.voice": "Du ringer med din PIN-kod till:",
+        "check.summary": "Ange 4 PIN-kod för att verifiera",
+        "check.error.invalid_pin_code": "Ogiltig PIN-kod",
+        "check.help": "Matat in fel nummer eller behöver en ny kod?",
+        "check.countdown.seconds": "Försök igen om %remaining% sekund.|Försök igen om %remaining% sekund.",
+        "check.countdown.minutes": "Försök igen om %remaining% minut.|Försök igen om %remaining% minut.",
+        "check.retry": "Försök Igen",
+        "check.fallback": "Ring mig nu",
+        "check.success": "Tack! Telefonen har verifierats!",
+        "onboarding.success": "Tack! En länk har skickats till din telefon.",
+        "onboarding.send": "Få Ombord",
+        "onboarding.retry": "Inte att få en länk?",
+        "error.country_not_supported": "Land som inte stöds",
+        "error.invalid_number_length": "Ser inte ut som ett giltigt telefonnummer",
+        "error.invalid_app_key": "Ogiltiga App Nyckel",
+        "error.direct_api_access_not_available": "Direkt API-åtkomst inte tillgängligt",
+        "error.web_access_not_available": "Web access inte tillgängligt",
+        "error.invalid_api_access": "Ogiltiga API-åtkomst",
+        "error.wait_to_retry": "Vänta med att försöka igen",
+        "error.invalid_number": "Ser inte ut som ett giltigt telefonnummer",
+        "error.invalid_site_key": "Ogiltiga Site key",
+        "error.invalid_session": "Ogiltig Session",
+        "error.max_attempts_reached": "Max försök nått",
+        "error.invalid_service": "Ogiltiga service",
+        "error.instant_validation_not_available": "Instant validering inte tillgängligt",
+        "error.invalid_parameters": "Ogiltiga parametrar",
+        "error.invalid_pin_code": "Ogiltig PIN-kod",
+        "error.session_expired": "Sessionen gått ut",
+        "error.not_authorized": "Inte Auktoriserad",
+        "error.url_validation_not_available": "Url validering inte tillgängligt",
+        "error.unknown_error": "Okänt fel",
+        "error.max_validations_reached": "Max valideringar nått",
+        "error.out_of_credits": "Opps.. Vi kunde inte verifiera din mobiltelefon.",
     }
 }

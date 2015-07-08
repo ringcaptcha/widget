@@ -45,7 +45,6 @@ module.exports = (grunt) ->
           standalone: 'RingCaptcha'
           postBundleCB: (err, src, next) ->
             if (src)
-              src = src.replace('%API_ENDPOINT%', config.widget.api).replace('%CDN_ENDPOINT%', config.widget.cdn)
               src = '(function (jQuery) { ' + src + ' })(window.jQuery);'
             next(err, src)
         files:

@@ -3,7 +3,7 @@ Load module dependencies.
 ###
 $ = require('./zepto')
 events = require('./events')
-config = require('./config')
+config = require('../config.json')
 session = require('./util/session')
 fingerprint = require('./util/fingerprint')
 geolocation = require('./util/geolocation')
@@ -30,7 +30,7 @@ class Api
     wrapper = el
     app = appKey
     options = wOptions
-    endpoint = url ? config.widget.defaults.endpoint
+    endpoint = url ? config.widget.api
     @mode = appMode;
 
   setMode: (appMode) ->

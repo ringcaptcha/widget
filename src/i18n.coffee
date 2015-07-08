@@ -2,7 +2,7 @@
 Load module dependencies.
 ###
 $ = require('./zepto')
-config = require('./config')
+config = require('../config.json')
 session = require('./util/session')
 ajax = require('./util/ajax')
 

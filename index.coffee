@@ -1,6 +1,6 @@
 $ = require('./src/zepto')
 Widget = require('./src/widget')
-config = require('./src/config')
+config = require('./config.json')
 cssify = require('cssify')
 
 cssPath = config.widget.cdn + 'resources/css/widget.css'

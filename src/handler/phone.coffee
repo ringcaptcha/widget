@@ -42,7 +42,7 @@ class PhoneHandler
           countdownInterval = =>
             remaining = Math.round((@api.data.retryAt - new Date().getTime()) / 1000)
             if remaining > 0
-              value = @i18n.transChoice('check.countdown.seconds', remaining, { remaining: '<strong>' + remaining + '</strong>' })
+              value = @i18n.t('check.countdown.seconds', remaining)
               $countdown.removeClass('hide').html(value)
             else
               showLinks()
@@ -79,14 +79,14 @@ class PhoneHandler
       return
 
     # Magic happends here :)
-    @api.code(fullPhoneNumber, dispatchType, @i18n.getLocale()).done(doneCallback).fail(failCallback).always(alwaysCallback)
+    @api.code(fullPhoneNumber, dispatchType, @i18n.locale()).done(doneCallback).fail(failCallback).always(alwaysCallback)
 
   ###
   Show inline error.
   ###
   showInlineError: (error) ->
 
-    message = @i18n.trans("error.#{error}")
+    message = @i18n.t("error.#{error}")
 
     @wrapper.find('.phone-input').get(0).setSelectionRange(30, 30)
 
@@ -95,7 +95,7 @@ class PhoneHandler
       @wrapper.find('.phone-input').one 'focus', =>
         @wrapper.find('#js-inline-alert').removeClass('text-danger').text('We\'ll text you a link to download the app')
     else
-      originalText = @i18n.trans("code.summary")
+      originalText = @i18n.t("code.summary")
       @wrapper.find('.help').addClass('active')
       summary = @wrapper.find('.phone-box').addClass('has-error').find('.summary').text(message)
       @wrapper.find('.phone-input').one 'keyup', =>

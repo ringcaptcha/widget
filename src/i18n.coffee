@@ -1,116 +1,35 @@
-###
-Load module dependencies.
-###
-$ = require('./zepto')
-config = require('../config.json')
-session = require('./util/session')
-ajax = require('./util/ajax')
+$ = require './zepto'
+config = require '../config.json'
+ajax = require './util/ajax'
+Polyglot = require 'node-polyglot'
 
-###
-I18n
-###
-class I18n
+class I18n extends Polyglot
 
-  ###
-  Define private members
-  ###
-  messages = {}
-  fallbackMessages = {}
-  direction = undefined
-  pluralizationRule = undefined
-  currentLocale = undefined
-
-  ###
-  Constructor
-  ###
-  constructor: () ->
-    pluralizationRule = (number) -> return if number is 1 then 0 else 1
-
-  ###
-  Load messages
-  ###
   load: (locale) ->
-
-    locale = locale.toLowerCase()
-    locale = if locale in config.widget.locale.available then locale else 'en'
 
     deferred = $.Deferred()
 
-    hasCustomLocale = RingCaptchaLocale? and RingCaptchaLocale[locale]?
-
-    currentLocale = locale
-
-    if hasCustomLocale
-      if isObject(RingCaptchaLocale[locale])
-        messages = RingCaptchaLocale[locale]
-      else
-        doneCallback = (response) ->
-          messages = response
-
-        failCallback = -> hasCustomLocale = false
-
-        ajaxSetup =
-          type: 'GET',
-          url: RingCaptchaLocale[locale]
-
-        ajax(ajaxSetup, doneCallback, failCallback)
-
-    doneCallback = (response) ->
-      direction = response.direction
-      if hasCustomLocale
-        fallbackMessages = response.messages
-      else
-        messages = response.messages
-      deferred.resolve()
+    baseLocale = if locale in config.widget.locale.available then locale else config.widget.locale.default
 
     ajaxSetup =
-      type: 'GET',
-      url: makePath(locale)
+      type: 'GET'
+      async: false
+      url: "#{config.widget.cdn}/resources/locales/#{baseLocale}/messages.json"
 
-    ajax(ajaxSetup, doneCallback, deferred.reject)
+    ajax(ajaxSetup, ((response) => @extend response), deferred.reject)
+
+    if RingCaptchaLocale? and RingCaptchaLocale[locale]?
+      phrases = RingCaptchaLocale[locale]
+      if $.isPlainObject(phrases)
+        @extend phrases
+      else
+        ajaxSetup =
+          type: 'GET'
+          async: false
+          url: phrases
+
+        ajax(ajaxSetup, ((response) => @extend response), deferred.reject)
 
     deferred.promise()
-
-  makePath = (locale) ->
-    return "#{config.widget.cdn}resources/locales/#{locale}/messages.json"
-
-  ###
-  ###
-  get: (id) ->
-    return messages unless id?
-    return messages[id] if messages[id]?
-    return messages["widget.#{id}"] if messages["widget.#{id}"]?
-    return fallbackMessages[id]
-
-  ###
-  ###
-  sprintf = (str, parameters) ->
-    str.replace /\%([\w]+)\%/ig, (i, key) -> parameters[key] || "%#{key}%"
-
-  isObject = (value) ->
-    type = typeof value;
-    return type is 'function' or (!!value and type is 'object');
-
-  ###
-  ###
-  trans: (id, parameters) ->
-    value = @get(id)
-    return if parameters? then sprintf(value, parameters) else value
-
-  ###
-  ###
-  transChoice: (id, number, parameters) ->
-    index = pluralizationRule(number)
-    value = @get(id).split('|')[index]
-    return id unless value?
-    return if parameters? then sprintf(value, parameters) else value
-
-  ###
-  ###
-  getLocale: -> currentLocale
-
-  ###
-  ###
-  getDirection: -> direction
 
 module.exports = I18n

@@ -18,7 +18,8 @@
     "onboard"
   ],
   "dependencies": {
-    "cssify": "^0.4.2"
+    "cssify": "^0.4.2",
+    "node-polyglot": "^0.4.3"
   },
   "devDependencies": {
     "bower": "^1.4.1",

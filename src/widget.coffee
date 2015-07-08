@@ -87,9 +87,6 @@ class Widget
 
     wrapper.html template(i18n: i18n, support_email: api.data.supportEmail)
 
-    if i18n.getDirection() is 'rtl'
-      wrapper.find('.ringcaptcha.widget').attr('dir', 'rtl');
-
     if 'W' in api.data.features
       wrapper.find('.ringcaptcha.widget').addClass('no-brand')
       wrapper.find('.brand').remove()
@@ -114,7 +111,7 @@ class Widget
     currentStep.setMode(mode)
 
     if (mode is 'onboarding' or mode is 'distribution') and status is 'verified'
-      currentStep.setup(i18n.trans('onboarding.success'), false, true)
+      currentStep.setup(i18n.t('onboarding.success'), false, true)
     else
       currentStep.setup()
 
@@ -170,7 +167,7 @@ class Widget
     if (code)
         wrapper.find('[name="ringcaptcha_pin_code"]').val(code)
     unless (mode is 'onboarding' or mode is 'distribution')
-      fadeStep(notificationStep, i18n.trans('check.success'), false)
+      fadeStep(notificationStep, i18n.t('check.success'), false)
 
   ###
   Execute this method when user fallback to voice.
@@ -191,8 +188,8 @@ class Widget
     errorKey = error.error ? error
     errorCode = errorKey.split('_').reduce(((a, b) -> a + b[0]), '')
     reload = errorKey isnt 'max_validations_reached' and api.data.attempts <= 3
-    anchor = if errorKey is 'out_of_credits' then [i18n.trans('help.contact'), "mailto:#{api.data.supportEmail}?subject=Ref: #{errorCode.toUpperCase()}"] else false
-    fadeStep(notificationStep, i18n.trans("error.#{errorKey}"), true, reload, anchor)
+    anchor = if errorKey is 'out_of_credits' then [i18n.t('help.contact'), "mailto:#{api.data.supportEmail}?subject=Ref: #{errorCode.toUpperCase()}"] else false
+    fadeStep(notificationStep, i18n.t("error.#{errorKey}"), true, reload, anchor)
 
   ###
   Execute this method when widget must be reloaded.
@@ -202,7 +199,7 @@ class Widget
   ###
   Execute this method when max validations is reached.
   ###
-  onMaxValidationsReached = -> fadeStep(notificationStep, i18n.trans('error.max_validations_reached'), true, true)
+  onMaxValidationsReached = -> fadeStep(notificationStep, i18n.t('error.max_validations_reached'), true, true)
 
   ###
   Execute this method when the parent form is submitted.
@@ -218,7 +215,7 @@ class Widget
   Show help modal.
   ###
   showHelp = (event) ->
-    popup('https://ringcaptcha.com/widget/help/' + options.app + '/' + i18n.getLocale(), i18n.trans('help'), 600, 500);
+    popup('https://ringcaptcha.com/widget/help/' + options.app + '/' + i18n.locale(), i18n.t('help'), 600, 500);
     event.preventDefault()
 
   ###

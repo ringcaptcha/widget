@@ -109,8 +109,8 @@ class CodeHandler
   ###
   showInlineError: (error) ->
 
-    message = @i18n.trans("error.#{error}")
-    originalText = @i18n.trans("check.summary")
+    message = @i18n.t("error.#{error}")
+    originalText = @i18n.t("check.summary")
 
     @wrapper.find('.help').addClass('active')
     @wrapper.find('.pin-summary').parent('div').addClass('has-error')

@@ -54,7 +54,7 @@ class NotificationStep
         countdownInterval = =>
           remaining = Math.round((@api.data.retryAt - new Date().getTime()) / 1000)
           if remaining > 0
-            value = @i18n.transChoice('check.countdown.seconds', remaining, { remaining: '<strong>' + remaining + '</strong>' })
+            value = @i18n.t('check.countdown.seconds', remaining)
             $countdown.removeClass('hide').html(value)
           else
             showLinks()

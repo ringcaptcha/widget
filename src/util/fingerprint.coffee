@@ -1,4 +1,4 @@
-Fingerprint = require('fingerprint')
+Fingerprint = require('fingerprintjs')
 
 fingerprint = new Fingerprint(canvas: true, screen_resolution: true, ie_activex: true)
 

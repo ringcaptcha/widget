@@ -6,7 +6,7 @@ session = require('../util/session')
 arr = require('../util/arr')
 countries = require('../countries')
 
-Formatter = require('../../bower_components/formatter.js/dist/formatter')
+Formatter = require('../../node_modules/formatter.js/dist/formatter')
 
 class PhoneStep
 

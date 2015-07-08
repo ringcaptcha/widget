@@ -55,7 +55,7 @@ class CodeStep
 
     key = if api.data.dispatchType in ['sms', 'url_sms'] then 'check.title.sms' else 'check.title.voice'
 
-    el.find('.title').text(i18n.trans(key))
+    el.find('.title').text(i18n.t(key))
     el.find('.phone-number').text(api.data.phoneNumber)
 
     wrapper.find('[name="ringcaptcha_phone_number"]').val(api.data.phoneNumber);
@@ -75,7 +75,7 @@ class CodeStep
       countdownInterval = ->
         remaining = Math.round((api.data.retryAt - new Date().getTime()) / 1000)
         if remaining > 0
-          value = i18n.transChoice('check.countdown.seconds', remaining, { remaining: '<strong>' + remaining + '</strong>' })
+          value = i18n.t('check.countdown.seconds', remaining)
           $countdown.removeClass('hide').html(value)
         else
           showLinks()

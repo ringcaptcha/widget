@@ -91,9 +91,9 @@ class PhoneStep
       widgetType = 'sms'
 
     if widgetType in ['sms', 'voice']
-      el.find('.method-summary').text(i18n.trans("code.service.#{widgetType}.summary"))
+      el.find('.method-summary').text(i18n.t("code.service.#{widgetType}.summary"))
       el.find('.method-input').remove()
-      el.find('.js-send-code').text(i18n.trans("code.service.#{widgetType}.label"));
+      el.find('.js-send-code').text(i18n.t("code.service.#{widgetType}.label"));
 
     if 'V' not in api.data.features and widgetType is 'voice'
       widgetType = 'sms'
@@ -101,15 +101,15 @@ class PhoneStep
       widgetType = 'sms'
 
     if widgetType in ['sms', 'voice']
-      el.find('.method-summary').text(i18n.trans("widget.code.service.#{widgetType}.summary"))
+      el.find('.method-summary').text(i18n.t("widget.code.service.#{widgetType}.summary"))
       el.find('.method-input').remove()
-      el.find('.js-send-code').text(i18n.trans("widget.code.service.#{widgetType}.label"));
+      el.find('.js-send-code').text(i18n.t("widget.code.service.#{widgetType}.label"));
 
     co = {};
 
     for i, country of countries
-      if country.country_name[i18n.getLocale()]?
-        countryName = country.country_name[i18n.getLocale()]
+      if country.country_name[i18n.locale()]?
+        countryName = country.country_name[i18n.locale()]
       else
         countryName = country.country_name['en']
       co[countryName] = { code: country.country_code, example: country.example_dial, iso: i }
@@ -124,7 +124,7 @@ class PhoneStep
         'data-country-code': country.code
         'data-country-name': name
         'data-country-dial-example': country.example
-      if i18n.getLocale() is 'ar'
+      if i18n.locale() is 'ar'
         title = "#{name} #{country.code}"
       else
         title = "#{name} (+#{country.code})"
@@ -154,10 +154,10 @@ class PhoneStep
       if 'D' in api.data.features
         wrapper.find("#method-#{type}").trigger('click')
       else
-        submitText = i18n.trans("code.submit.#{type}")
+        submitText = i18n.t("code.submit.#{type}")
         wrapper.find('.js-send-code').text(submitText)
     else
-      submitText = i18n.trans("onboarding.send")
+      submitText = i18n.t("onboarding.send")
       wrapper.find('.js-send-code').text(submitText)
 
     if (api.mode is 'onboarding' or api.mode is 'distribution') and api.data.status is 'pending'
@@ -174,7 +174,7 @@ class PhoneStep
         countdownInterval = =>
           remaining = Math.round((api.data.retryAt - new Date().getTime()) / 1000)
           if remaining > 0
-            value = i18n.transChoice('check.countdown.seconds', remaining, { remaining: '<strong>' + remaining + '</strong>' })
+            value = i18n.t('check.countdown.seconds', remaining)
             $countdown.removeClass('hide').html(value)
           else
             showLinks()
@@ -251,7 +251,7 @@ class PhoneStep
   selectCountry = (event) ->
 
     currentCountry = if event.type is 'change' then $(this).find('option:selected').data() else $(this).data()
-    example = if currentCountry.countryDialExample then i18n.trans('code.example', { example: currentCountry.countryDialExample }) else ''
+    example = if currentCountry.countryDialExample then i18n.t('code.example', { example: currentCountry.countryDialExample }) else ''
 
     if currentCountry.countryIso in ['us', 'ca']
       formatted.enable()

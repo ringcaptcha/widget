@@ -1,11 +1,11 @@
 <div class="wizard-code-step">
       <div class="wizard-step-header">
-        <h3><%= i18n.trans('code.title') %></h3>&nbsp;<a href="#" class="help" title="<%= i18n.trans('help') %>" tabindex="-1"></a>
+        <h3><%= i18n.t('code.title') %></h3>&nbsp;<a href="#" class="help" title="<%= i18n.t('help') %>" tabindex="-1"></a>
       </div>
       <div class="wizard-step-content">
         <div class="row">
           <div class="phone-box">
-            <p class="summary"><%= i18n.trans('code.summary') %></p>
+            <p class="summary"><%= i18n.t('code.summary') %></p>
             <select class="form-control country-list-mobile"></select>
 
 
@@ -16,7 +16,7 @@
                 </button> 
                 <ul class="dropdown-menu country-list">
                   <li class="country-search">
-                    <input type="text" placeholder="<%= i18n.trans('code.search') %>" class="form-control country-search-input">
+                    <input type="text" placeholder="<%= i18n.t('code.search') %>" class="form-control country-search-input">
                   </li>
                 </ul>
               </div>
@@ -25,18 +25,18 @@
 
           </div>
           <div class="method-selector">
-            <p class="method-summary"><%= i18n.trans('code.service.summary') %></p>
+            <p class="method-summary"><%= i18n.t('code.service.summary') %></p>
             <div class="method-input">
               <div class="radio">
-                <input type="radio" name="rc[core][method]" id="method-sms" value="sms" data-submit-button-value="<%= i18n.trans('code.submit.sms') %>">
+                <input type="radio" name="rc[core][method]" id="method-sms" value="sms" data-submit-button-value="<%= i18n.t('code.submit.sms') %>">
                 <label for="method-sms">
-                  <i></i>&nbsp;<span><%= i18n.trans('code.service.sms.label') %></span>
+                  <i></i>&nbsp;<span><%= i18n.t('code.service.sms.label') %></span>
                 </label>
               </div>
               <div class="radio">
-                <input type="radio" name="rc[core][method]" id="method-voice" value="voice" data-submit-button-value="<%= i18n.trans('code.submit.voice') %>">
+                <input type="radio" name="rc[core][method]" id="method-voice" value="voice" data-submit-button-value="<%= i18n.t('code.submit.voice') %>">
                 <label for="method-voice">
-                  <i></i>&nbsp;<span><%= i18n.trans('code.service.voice.label') %></span>
+                  <i></i>&nbsp;<span><%= i18n.t('code.service.voice.label') %></span>
                 </label>
               </div>
             </div>

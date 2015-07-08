@@ -72,7 +72,7 @@ class I18n
     deferred.promise()
 
   makePath = (locale) ->
-    return "#{config.widget.cdn}resources/locales/#{locale}/messages.json"
+    return "#{config.widget.cdn}/resources/locales/#{locale}/messages.json"
 
   ###
   ###

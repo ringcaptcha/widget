@@ -23,7 +23,7 @@ module.exports = (grunt) ->
         fontsDir: 'resources/fonts'
         outputStyle: 'compressed'
         force: true
-        importPath: ['bower_components/bootstrap-sass/assets/stylesheets', 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap']
+        importPath: ['node_modules/bootstrap-sass/assets/stylesheets', 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap']
       watch:
         options:
           watch: true

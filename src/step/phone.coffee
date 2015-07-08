@@ -95,16 +95,6 @@ class PhoneStep
       el.find('.method-input').remove()
       el.find('.js-send-code').text(i18n.trans("code.service.#{widgetType}.label"));
 
-    if 'V' not in api.data.features and widgetType is 'voice'
-      widgetType = 'sms'
-    else if 'D' not in api.data.features and widgetType is 'dual'
-      widgetType = 'sms'
-
-    if widgetType in ['sms', 'voice']
-      el.find('.method-summary').text(i18n.trans("widget.code.service.#{widgetType}.summary"))
-      el.find('.method-input').remove()
-      el.find('.js-send-code').text(i18n.trans("widget.code.service.#{widgetType}.label"));
-
     co = {};
 
     for i, country of countries

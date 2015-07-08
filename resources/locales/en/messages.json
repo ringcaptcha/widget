@@ -19,7 +19,7 @@
         "code.example": "e.g. %example%",
         "check.title.sms": "Texting with your PIN code to:",
         "check.title.voice": "Calling with your PIN code to:",
-        "check.summary": "Enter 4 PIN code to verify",
+        "check.summary": "Enter 4 digit PIN code to verify",
         "check.error.invalid_pin_code": "Invalid PIN code",
         "check.help": "Entered the wrong number or need a new code?",
         "check.countdown.seconds": "Try again in %remaining% second.|Try again in %remaining% seconds.",

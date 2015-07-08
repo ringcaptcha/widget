@@ -18,7 +18,6 @@ class Api
   Define private members.
   ###
   app = undefined
-  endpoint = undefined
   mode = undefined
   wrapper = undefined
   options = undefined
@@ -26,11 +25,10 @@ class Api
   ###
   Constructor.
   ###
-  constructor: (el, appKey, url, appMode, wOptions) ->
+  constructor: (el, appKey, appMode, wOptions) ->
     wrapper = el
     app = appKey
     options = wOptions
-    endpoint = url ? config.widget.api
     @mode = appMode;
 
   setMode: (appMode) ->
@@ -66,7 +64,7 @@ class Api
       # Setup AJAX request
       ajaxSetup =
         type: 'POST'
-        url: "#{endpoint}/#{app}/captcha"
+        url: "#{config.widget.api}/#{app}/captcha"
         data: params
 
       # Create session object and save it
@@ -141,7 +139,7 @@ class Api
 
     ajaxSetup =
       type: 'POST'
-      url: "#{endpoint}/v2/apps/#{app}/captcha/#{dispatchType}"
+      url: "#{config.widget.api}/v2/apps/#{app}/captcha/#{dispatchType}"
       data: params
 
     # Update data
@@ -186,7 +184,7 @@ class Api
     # Setup AJAX request
     ajaxSetup =
       type: 'POST'
-      url: "#{endpoint}/v2/apps/#{app}/check"
+      url: "#{config.widget.api}/v2/apps/#{app}/check"
       data:
         token: @data.token
         fp: @data.fingerprint ? fingerprint.getFingerprint()
@@ -223,7 +221,7 @@ class Api
     # Setup AJAX request
     ajaxSetup =
       type: 'POST'
-      url: "#{endpoint}/v2/apps/#{app}/check/url"
+      url: "#{config.widget.api}/v2/apps/#{app}/check/url"
       data:
         token: @data.token
         fp: @data.fingerprint ? fingerprint.getFingerprint()

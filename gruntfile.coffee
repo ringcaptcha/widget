@@ -102,7 +102,7 @@ module.exports = (grunt) ->
         region: config.aws.region
         access: 'public-read'
         headers:
-          'Cache-Control': 'max-age=0'
+          'Cache-Control': 'max-age=3600'
       production:
         options:
           bucket: config.aws.s3.bucket
@@ -114,12 +114,26 @@ module.exports = (grunt) ->
             verify: true
         ]
 
+    ###
+    Invalidate CDN cache
+    ###
+    invalidate_cloudfront:
+      options:
+        key: config.aws.key,
+        secret: config.aws.secret,
+        distribution: config.aws.distribution
+      production:
+        files: [
+          { expand: true, cwd: './dist/', src: ['**/*'], filter: 'isFile', dest: config.aws.s3.path }
+        ]
+
   grunt.loadNpmTasks 'grunt-browserify'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-s3'
+  grunt.loadNpmTasks 'grunt-invalidate-cloudfront'
 
   grunt.registerTask 'build', ['browserify:compile', 'uglify:dist', 'copy', 'compass:compile']
 

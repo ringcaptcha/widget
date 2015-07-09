@@ -36,7 +36,7 @@ class Widget
 
     mode = options.mode ? 'verification'
 
-    api = new Api(wrapper, options.app, options.endpoint, mode, options)
+    api = new Api(wrapper, options.app, mode, options)
     i18n = new I18n()
 
     phoneStep = new PhoneStep(wrapper, i18n, api, mode)

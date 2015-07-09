@@ -17,7 +17,7 @@ module.exports = (grunt) ->
     ###
     compass:
       options:
-        cssDir: 'dist/resources/css'
+        cssDir: 'build/resources/css'
         sassDir: 'resources/scss'
         imagesDir: 'resources/images'
         fontsDir: 'resources/fonts'
@@ -48,7 +48,7 @@ module.exports = (grunt) ->
               src = '(function (jQuery) { ' + src + ' })(window.jQuery);'
             next(err, src)
         files:
-          'dist/bundle.js': ['index.coffee']
+          'build/bundle.js': ['index.coffee']
 
     ###
     Uglify compiled code.
@@ -57,9 +57,9 @@ module.exports = (grunt) ->
       options:
         banner: "<%= banner %>"
         preserveComments: false
-      dist:
+      build:
         files:
-          'dist/bundle.min.js': ['dist/bundle.js']
+          'build/bundle.min.js': ['build/bundle.js']
 
     ###
     Copy.
@@ -67,12 +67,12 @@ module.exports = (grunt) ->
     copy:
       resources:
         files: [
-          { expand: true, src: ['resources/fonts/**'], dest: 'dist' }
-          { expand: true, src: ['resources/images/**'], dest: 'dist' }
+          { expand: true, src: ['resources/fonts/**'], dest: 'build' }
+          { expand: true, src: ['resources/images/**'], dest: 'build' }
         ]
       translations:
         files: [
-          { expand: true, src: ['resources/locales/**/*.json'], dest: 'dist' }
+          { expand: true, src: ['resources/locales/**/*.json'], dest: 'build' }
         ]
         options:
           process: (content, srcpath) ->
@@ -87,13 +87,13 @@ module.exports = (grunt) ->
         atBegin: true
       coffee:
         files: ['index.coffee', 'src/**/*.coffee']
-        tasks: ['browserify:compile', 'uglify:dist']
+        tasks: ['browserify:compile', 'uglify:build']
       resources:
         files: ['resources/!{scss,views}/**']
         tasks: ['copy:translations', 'copy:resources']
 
     ###
-    Upload dist files to S3
+    Upload build files to S3
     ###
     s3:
       options:
@@ -107,9 +107,9 @@ module.exports = (grunt) ->
         options:
           bucket: config.aws.s3.bucket
         sync: [
-          src: 'dist/**'
+          src: 'build/**'
           dest: config.aws.s3.path
-          rel: 'dist'
+          rel: 'build'
           options:
             verify: true
         ]
@@ -124,7 +124,7 @@ module.exports = (grunt) ->
         distribution: config.aws.distribution
       production:
         files: [
-          { expand: true, cwd: './dist/', src: ['**/*'], filter: 'isFile', dest: config.aws.s3.path }
+          { expand: true, cwd: './build/', src: ['**/*'], filter: 'isFile', dest: config.aws.s3.path }
         ]
 
   grunt.loadNpmTasks 'grunt-browserify'
@@ -135,5 +135,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-s3'
   grunt.loadNpmTasks 'grunt-invalidate-cloudfront'
 
-  grunt.registerTask 'build', ['browserify:compile', 'uglify:dist', 'copy', 'compass:compile']
+  grunt.registerTask 'build', ['browserify:compile', 'uglify:build', 'copy', 'compass:compile']
 

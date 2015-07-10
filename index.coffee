@@ -8,6 +8,6 @@ cssify.byUrl(cssPath)
 
 $('[data-widget]').each ->
   settings = $(this).data()
-  new Widget(this, settings).setup()
+  new Widget(this, settings.app, settings).setup()
 
 module.exports = {Widget}

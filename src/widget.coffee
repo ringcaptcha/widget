@@ -22,7 +22,7 @@ class Widget
   currentStep = undefined
   mode = undefined
 
-  constructor: (el, optionsHash = {}) ->
+  constructor: (el, key, optionsHash = {}) ->
 
     wrapper = $(el)
     options = $.extend({}, wrapper.data(), optionsHash)
@@ -32,25 +32,21 @@ class Widget
       delete options.events
 
     throw new Error('Missing container element.') unless wrapper.length > 0
-    throw new Error('You must provide an app key.') unless options.app?
 
     mode = options.mode ? 'verification'
 
-    api = new Api(wrapper, options.app, mode, options)
+    api = new Api(wrapper, key, mode, options)
     i18n = new I18n()
 
     phoneStep = new PhoneStep(wrapper, i18n, api, mode)
     codeStep = new CodeStep(wrapper, i18n, api)
     notificationStep = new NotificationStep(wrapper, i18n, api, mode)
 
-  ###
-  Setup widget.
-  ###
-  setup: ->
     doneCallback = ->
       sess = session.getSession(options.app)
       locale = options.locale or sess.locale or api.data.locale
       i18n.load(locale).done(render).fail(throwError)
+
     api.auth().done(validateFeatures, doneCallback).fail(throwError)
 
   validateFeatures = ->

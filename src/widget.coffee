@@ -49,6 +49,10 @@ class Widget
 
     api.auth().done(validateFeatures, doneCallback).fail(throwError)
 
+  setup: ->
+    console.warn('The setup method is deprecated and will be removed in the next major version.')
+    @
+
   validateFeatures = ->
     if mode == 'onboarding' and 'O' not in api.data.features
       mode = 'verification'

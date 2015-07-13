@@ -1,6 +1,8 @@
 RingCaptcha Widget
 ==================
 
+[![Build Status](https://travis-ci.org/ringcaptcha/widget.svg)](https://travis-ci.org/ringcaptcha/widget)
+
 A JavaScript based two-step verification widget.
 
 Installation

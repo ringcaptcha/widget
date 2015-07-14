@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd $(dirname "$0")/..
+
+git fetch -t upstream
+
+(git branch | grep -q '* master') || {
+  echo "Only release from the master branch."
+  exit 1
+}
+
+tag=v`node -e 'console.log(require("./package.json").version)'`
+
+read -p "You're about to release $tag. Are you sure? (y/n) " -n 1 -r
+echo ""
+if ! [[ $REPLY =~ ^[Yy]$ ]]; then
+  exit 1
+fi
+
+grep -q "$tag" CHANGELOG.md || {
+  echo "No entry for '$tag' found in the CHANGELOG."
+  exit 1
+}
+
+(git tag -l | grep -q "$tag") && {
+  echo "Whoops, there's already a '${tag}' tag."
+  exit 1
+}
+
+echo "Publishing package to the npm registry..."
+
+npm publish
+
+echo "Tagging release..."
+
+git tag "$tag" && git push upstream master --tags
+
+echo "Done, without errors."

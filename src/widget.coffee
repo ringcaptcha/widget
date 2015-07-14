@@ -25,6 +25,11 @@ class Widget
   constructor: (el, key, optionsHash = {}) ->
 
     wrapper = $(el)
+
+    if $.isPlainObject key
+      optionsHash = key
+      key = optionsHash.app
+
     options = $.extend({}, wrapper.data(), optionsHash)
 
     if options.events?

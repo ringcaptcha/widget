@@ -48,3 +48,14 @@ License
 -------
 
 By contributing, you agree that your contributions will be licensed under the Apache 2.0 license.
+
+Releasing
+=========
+
+This section is for maintainers. Here's the current process for releasing:
+
+ * Determine what version to release.
+ * Run `$ ./script/prepare-release version`.
+ * Create a pull request.
+ * Merge pull request.
+ * Run `$ ./script/release`.

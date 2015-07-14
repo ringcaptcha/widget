@@ -1,5 +1,6 @@
 {
   "name": "ringcaptcha-widget",
+  "version": "2.16.4",
   "description": "A JavaScript based two-step verification widget.",
   "author": "Diego Saint Esteben <diego@ringcaptcha.com>",
   "scripts": {

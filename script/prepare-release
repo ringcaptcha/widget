@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+set -e
+
+underline() {
+  echo -e "$1\n${1//?/${2:--}}";
+}
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 version";
+  exit 1;
+fi;
+
+cd $(dirname "$0")/..
+
+git fetch -t upstream
+
+(git branch | grep -q '* master') || {
+  echo "Only release from the master branch."
+  exit 1
+}
+
+latest=$(git describe --abbrev=0 --tags)
+version=$1
+
+read -p "You're about to prepare the release of $version (the latest release is $latest). Are you sure? (y/n) " -n 1 -r
+echo ""
+if ! [[ $REPLY =~ ^[Yy]$ ]]; then
+  exit 1
+fi
+
+echo "Creating release-$version branch..."
+
+git checkout -f -b release-$version
+
+echo "Summarizing changes in CHANGELOG.md file..."
+
+changes=$(git log $latest...HEAD --no-merges --reverse --pretty=format:" * %h: %s (%an)")
+header=$(head CHANGELOG.md -n 5)
+tail=$(tail CHANGELOG.md -n +5)
+title=$(underline $version)
+
+{
+  echo "$header";
+  echo "";
+  echo "$title";
+  echo "";
+  echo "$changes";
+  echo "$tail";
+} > CHANGELOG.md
+
+echo "Updating package.json version..."
+
+npm --no-git-tag-version version $version &> /dev/null
+
+echo "Committing changes..."
+
+git add package.json CHANGELOG.md
+git commit -m "Prepare for $version release"
+
+echo "Done, without errors."

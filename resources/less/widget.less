@@ -1,28 +1,26 @@
-@import "compass";
+@import "bootstrap/less/variables";
+@import "bootstrap/less/mixins";
+@import "bootstrap/less/utilities";
 
 @import "variables";
-@import "mixins";
-
-@import "modules/variables";
-@import "modules/mixins";
-@import "partials/typography";
+@import "typography";
 
 .ringcaptcha.widget {
 
   background-color: #fff;
   border: 1px solid #e1e6e7;
   max-width: 352px;
-  min-height: $widget-height-base;
-  padding: $widget-padding-base;
+  min-height: @widget-height-base;
+  padding: @widget-padding-base;
   position: relative;
-  font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    color: $text-color;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
   text-align: left;
+  border-radius: @border-radius-base;
 
-  @include border-radius($border-radius-base);
-  @include box-sizing(border-box);
+  .box-sizing(border-box);
 
   * {
     float: none;
@@ -77,28 +75,23 @@
     }
   }
 
-  @import "partials/reset";
+  @import "reset";
 
-  @import "normalize";
-  @import "buttons";
-  @import "close";
-  @import "forms";
-  @import "dropdowns";
-  @import "grid";
-  @import "tables";
-  @import "labels";
-  @import "type";
-  @import "input-groups";
-  @import "modals";
-  @import "utilities";
+  @import "bootstrap/less/normalize";
+  @import "bootstrap/less/buttons";
+  @import "bootstrap/less/forms";
+  @import "bootstrap/less/dropdowns";
+  @import "bootstrap/less/grid";
+  @import "bootstrap/less/type";
+  @import "bootstrap/less/input-groups";
 
-  @import "partials/desktop";
+  @import "desktop";
 
   &[dir="rtl"] {
-    @import "partials/rtl";
+    @import "rtl";
   }
 
-  @media (max-width: 500px - 1px) {
+  @media (max-width: 499px) {
 
     padding: 0;
     border: none;
@@ -124,7 +117,7 @@
       }
     }
 
-    @import "partials/mobile";
+    @import "mobile";
   }
 
 }

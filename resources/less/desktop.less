@@ -6,19 +6,17 @@
 ::-webkit-scrollbar-thumb {
   background: #DFE4E6;
   width: 7px;
-  @include border-radius(4px);
+  border-radius: 4px;
 
   &:hover {
-    background: $text-color;
+    background: @text-color;
   }
 }
 
 ::-webkit-scrollbar-track {
   background: lighten(#F5F5F5, 1%);
-  @include border-right-radius(4px);
+  .border-right-radius(4px);
 }
-
-p, h3 { display: block!important; }
 
 p { margin: 0 0 10px; }
 
@@ -29,23 +27,36 @@ a, span, strong { display: inline!important; }
 .caret { display: inline-block!important; }
 
 .powered {
-  background: image-url('brand-small.png') no-repeat;
+  background: url('../images/brand-small.png') no-repeat;
   color: transparent;
   &:hover {
     color: transparent;
   }
 }
 
+.help {
+  width: 15px;
+  height: 15px;
+  display: inline-block!important;
+  background: url('../images/sprite.png') no-repeat;
+  background-position: -112px -180px;
+  vertical-align: middle;
+
+  &.active {
+    background-position: -96px -180px;
+  }
+}
+
 a {
-  color: $link-color;
+  color: @link-color;
   text-decoration: none;
   &:hover {
-    color: $link-hover-color;
+    color: @link-hover-color;
   }
 }
 
 .btn-submit {
-  @include button-variant(#fff, #99bdca, #879399);
+  .button-variant(#fff, #99bdca, #879399);
 }
 
 .btn-dropdown {
@@ -59,20 +70,20 @@ a {
 .form-control {
   border: 1px solid #dfe4e6;
   color: #666666;
-  @include box-sizing(border-box);
-  @include box-shadow(none);
+  .box-sizing(border-box);
+  .box-shadow(none);
 }
 
 .has-error {
-  border-color: $brand-danger;
+  border-color: @brand-danger;
 
   p {
-    color: $brand-danger;
+    color: @brand-danger;
   }
 
   input {
-    border-color: $brand-danger!important;
-    @include box-shadow(none!important);
+    border-color: @brand-danger!important;
+    .box-shadow(none)!important;
   }
 }
 
@@ -83,7 +94,7 @@ a {
 
   .phone-input {
     border-color: #869398;
-    @include box-shadow(none);
+    .box-shadow(none);
   }
 }
 
@@ -105,14 +116,14 @@ a {
   overflow-y: auto;
   border-color: #DFE4E6;
   font-size: 16.8px;
-  width: $widget-width-base - (2 * $widget-padding-left-base) - 2px;
+  width: @widget-width-base - (2 * @widget-padding-left-base) - 2px;
   padding-top: 0;
-  @include box-shadow(none);
-  @include box-sizing(border-box);
+  .box-shadow(none);
+  .box-sizing(border-box);
 
   li {
     width: 100%!important;
-    @include box-sizing(border-box);
+    .box-sizing(border-box);
   }
 
   a {
@@ -128,7 +139,7 @@ a {
 
 .country-code {
   font-size: 0.929em;
-  color: $text-color;
+  color: @text-color;
 }
 
 .country-button {
@@ -145,7 +156,7 @@ a {
   &:hover {
     background: #fff;
     cursor: pointer;
-    @include box-shadow(none);
+    .box-shadow(none);
   }
 
   &[disabled], &[disabled]:hover {
@@ -155,7 +166,7 @@ a {
 }
 
 .digit:focus {
-  @include box-shadow(none);
+  .box-shadow(none);
 }
 
 .country-search {
@@ -166,10 +177,10 @@ a {
     border: none;
     width: 100%;
     float: none;
-    @include border-radius(4px);
+    border-radius: 4px;
 
     &:focus {
-      @include box-shadow(none);
+      .box-shadow(none);
     }
   }
 }
@@ -186,13 +197,14 @@ a {
 .brand {
   position: absolute;
   display: block;
-  right: $widget-padding-left-base;
+  right: @widget-padding-left-base;
 
   img {
     display: block;
     width: 95px;
     height: 21px;
-    @include sprite(0 -177px);
+    background: url('../images/sprite.png') no-repeat;
+    background-position: 0 -177px;
   }
 }
 
@@ -215,7 +227,7 @@ a {
     }
 
     .wizard-step-header {
-      @extend .col-md-4;
+      .make-md-column(4);
 
       .help {
         margin-top: -1px;
@@ -223,11 +235,11 @@ a {
     }
 
     .wizard-step-content {
-      @extend .col-md-6;
+      .make-md-column(6);
     }
 
     .wizard-step-footer {
-      @extend .col-md-6;
+      .make-md-column(6);
       text-align: center!important;
 
       a {
@@ -235,7 +247,7 @@ a {
 
         &:hover {
           text-decoration: underline;
-          color: darken($text-color, 15%);
+          color: darken(@text-color, 15%);
         }
       }
 
@@ -248,15 +260,16 @@ a {
   }
 
   .wizard-code-step {
-    @extend .row, .wizard-step;
+    .row;
+    .wizard-step;
 
     h3 {
       display: inline!important;
     }
 
     .phone-box {
-      margin: ($widget-height-base - ($widget-padding-top-base * 2) - 106) / 2 0;
-      @extend .col-md-6;
+      margin: (@widget-height-base - (@widget-padding-top-base * 2) - 106) / 2 0;
+      .make-md-column(6);
 
       .form-control {
         font-size: 0.929em;
@@ -266,7 +279,7 @@ a {
       .input-group-addon {
         background-color: #fff;
         border-color: #dfe4e6;
-        @include transition(border-color ease-in-out .15s);
+        .transition(border-color ease-in-out .15s);
 
         &.disabled {
           background-color: #f6f7f8;
@@ -281,7 +294,7 @@ a {
         background-color: lighten(#dfe4e6, 8%);
       }
 
-      @import "partials/flags";
+      @import "flags";
     }
 
     .method-selector {
@@ -325,14 +338,14 @@ a {
         width: 17px;
         height: 17px;
         vertical-align: middle;
-        background: image-url('sprite.png') no-repeat -264px -93px;
+        background: url('../images/sprite.png') no-repeat -264px -93px;
         cursor: pointer;
         margin-top: -2px;
-        @include inline-block;
+        display: inline-block;
       }
 
       input[type="radio"]:checked + label {
-        color: $text-color;
+        color: @text-color;
       }
 
       input[type="radio"]:checked + label i {
@@ -341,13 +354,14 @@ a {
     }
 
     .submit-button {
-      @extend .col-md-2;
+      .make-md-column(2);
       text-align: right!important;
     }
   }
 
   .wizard-check-step {
-    @extend .row, .wizard-step;
+    .make-row();
+    .wizard-step;
 
     h3 {
       line-height: 1.4em;
@@ -362,11 +376,11 @@ a {
       width: 125%;
       text-align: center!important;
       padding: (7px - 3.5px) 0 7px;
-      margin: 5px 0 5px $widget-padding-left-base * -1;
-      @include box-sizing(border-box);
+      margin: 5px 0 5px @widget-padding-left-base * -1;
+      .box-sizing(border-box);
 
       & > div {
-        width: $widget-width-base;
+        width: @widget-width-base;
       }
 
       .digit {
@@ -376,6 +390,8 @@ a {
         border: 1px solid #dfe4e6;
         font-size: 0.929em;
 
+        .input-size(36px, 5px, 5px, 14px, 0, 4px);
+
         &:focus {
           border-color: #88939a;
         }
@@ -384,23 +400,22 @@ a {
           background-color: lighten(#dfe4e6, 9%);
         }
       }
-
-      @include input-size('.digit', 36px, 5px, 5px, 14px, 0, 4px);
     }
   }
 
   .wizard-success-step {
     text-align: center!important;
-    @extend .row, .wizard-step;
+    .make-row();
+    .wizard-step;
 
     .wizard-step-content {
       height: 50px;
-      margin: ($widget-height-base - (2 * $widget-padding-top-base) - 50px) / 2 0;
+      margin: (@widget-height-base - (2 * @widget-padding-top-base) - 50px) / 2 0;
     }
 
     .icon {
-      @include inline-block();
-      @include sprite();
+      display: inline-block;
+      background: url('../images/sprite.png') no-repeat;
 
       &.icon-success {
         width: 29px;

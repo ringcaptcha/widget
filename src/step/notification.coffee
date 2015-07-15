@@ -36,7 +36,6 @@ class NotificationStep
 
     el = $ template(i18n: @i18n)
 
-    el.find('.icon').addClass "icon-#{ if @isError then 'error' else 'success' }"
     el.find('h4').text @messageKey
 
     if @reload

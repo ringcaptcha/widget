@@ -3,8 +3,11 @@ language: node_js
 sudo: false
 
 matrix:
-    fast_finish: true
+  fast_finish: true
+
+install:
+  - gem install compass
+  - npm install
 
 before_script:
-  - gem install compass
   - npm run build

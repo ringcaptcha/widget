@@ -6,7 +6,6 @@ matrix:
   fast_finish: true
 
 install:
-  - gem install compass
   - npm install
   - cp config.json.dist config.json
 

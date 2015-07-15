@@ -8,6 +8,7 @@ matrix:
 install:
   - gem install compass
   - npm install
+  - cp config.json.dist config.json
 
 before_script:
   - npm run build

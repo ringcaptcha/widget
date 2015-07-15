@@ -15,22 +15,13 @@ module.exports = (grunt) ->
     ###
     Compile stylesheets.
     ###
-    compass:
+    less:
       options:
-        cssDir: 'build/resources/css'
-        sassDir: 'resources/scss'
-        imagesDir: 'resources/images'
-        fontsDir: 'resources/fonts'
-        outputStyle: 'compressed'
-        force: true
-        importPath: ['node_modules/bootstrap-sass/assets/stylesheets', 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap']
-      watch:
-        options:
-          watch: true
+        paths: ['node_modules']
+        compress: true
       compile:
-        options:
-          httpPath: config.widget.cdn
-          relativeAssets: false
+        files:
+          'build/resources/css/widget.css': 'resources/less/widget.less'
 
     ###
     Compile widget.
@@ -128,12 +119,12 @@ module.exports = (grunt) ->
         ]
 
   grunt.loadNpmTasks 'grunt-browserify'
-  grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-s3'
   grunt.loadNpmTasks 'grunt-invalidate-cloudfront'
 
-  grunt.registerTask 'build', ['browserify:compile', 'uglify:build', 'copy', 'compass:compile']
+  grunt.registerTask 'build', ['browserify:compile', 'uglify:build', 'copy', 'less:compile']
 

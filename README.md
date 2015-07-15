@@ -24,8 +24,6 @@ Do you want to contribute? We have [a guide](CONTRIBUTING.md) that explains our 
 ### Requirements
 
  * Node.js 0.10+
- * Ruby 1.8+
- * Compass
 
 ### Building
 

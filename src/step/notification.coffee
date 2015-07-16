@@ -29,8 +29,8 @@ class NotificationStep
   ###
   render: ->
 
-    onboarding_template = require("../../resources/views/onboarding/step/notification.html")
-    verification_template = require("../../resources/views/verification/step/notification.html")
+    onboarding_template = require("../../resources/views/onboarding/step/notification.hbs")
+    verification_template = require("../../resources/views/verification/step/notification.hbs")
 
     template = if (mode is 'onboarding' or mode is 'distribution') then onboarding_template else verification_template
 

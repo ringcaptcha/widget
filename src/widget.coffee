@@ -85,8 +85,8 @@ class Widget
 
     return if not displayAlways and api.data.supportedCountries.length > 0 and api.data.country not in api.data.supportedCountries
 
-    onboarding_template = require("../resources/views/onboarding/base.html")
-    verification_template = require("../resources/views/verification/base.html")
+    onboarding_template = require("../resources/views/onboarding/base.hbs")
+    verification_template = require("../resources/views/verification/base.hbs")
 
     template = if (mode is 'onboarding' or mode is 'distribution') then onboarding_template else verification_template
 

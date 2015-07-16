@@ -51,7 +51,7 @@ class CodeStep
   ###
   render = ->
 
-    el = $ require('../../resources/views/verification/step/code.html')(i18n: i18n)
+    el = $ require('../../resources/views/verification/step/code.hbs')(i18n: i18n)
 
     key = if api.data.dispatchType in ['sms', 'url_sms'] then 'check.title.sms' else 'check.title.voice'
 

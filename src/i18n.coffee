@@ -32,7 +32,7 @@ class I18n
   load: (locale) ->
 
     locale = locale.toLowerCase()
-    locale = if locale in config.widget.locale.available then locale else 'en'
+    locale = if locale in config.locale.available then locale else 'en'
 
     deferred = $.Deferred()
 
@@ -72,7 +72,7 @@ class I18n
     deferred.promise()
 
   makePath = (locale) ->
-    return "#{config.widget.cdn}/resources/locales/#{locale}/messages.json"
+    return "#{config.cdn}/resources/locales/#{locale}/messages.json"
 
   ###
   ###

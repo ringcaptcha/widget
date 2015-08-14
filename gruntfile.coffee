@@ -4,6 +4,7 @@ Define tasks.
 module.exports = (grunt) ->
 
   config = grunt.file.readJSON('config.json')
+  aws = grunt.file.readJSON('aws.json')
 
   grunt.initConfig
 
@@ -88,18 +89,18 @@ module.exports = (grunt) ->
     ###
     s3:
       options:
-        key: config.aws.key
-        secret: config.aws.secret
-        region: config.aws.region
+        key: aws.key
+        secret: aws.secret
+        region: aws.region
         access: 'public-read'
         headers:
           'Cache-Control': 'max-age=3600'
       production:
         options:
-          bucket: config.aws.s3.bucket
+          bucket: aws.s3.bucket
         sync: [
           src: 'build/**'
-          dest: config.aws.s3.path
+          dest: aws.s3.path
           rel: 'build'
           options:
             verify: true
@@ -110,12 +111,12 @@ module.exports = (grunt) ->
     ###
     invalidate_cloudfront:
       options:
-        key: config.aws.key,
-        secret: config.aws.secret,
-        distribution: config.aws.distribution
+        key: aws.key,
+        secret: aws.secret,
+        distribution: aws.distribution
       production:
         files: [
-          { expand: true, cwd: './build/', src: ['**/*'], filter: 'isFile', dest: config.aws.s3.path }
+          { expand: true, cwd: './build/', src: ['**/*'], filter: 'isFile', dest: aws.s3.path }
         ]
 
   grunt.loadNpmTasks 'grunt-browserify'

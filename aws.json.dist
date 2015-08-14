@@ -1,0 +1,10 @@
+{
+  "key": "my_public_key",
+  "secret": "my_secret_key",
+  "region": "us-standard",
+  "distribution": "",
+  "s3": {
+    "bucket": "widget",
+    "path": "/"
+  }
+}

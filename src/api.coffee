@@ -64,7 +64,7 @@ class Api
       # Setup AJAX request
       ajaxSetup =
         type: 'POST'
-        url: "#{config.widget.api}/#{app}/captcha"
+        url: "#{config.api}/#{app}/captcha"
         data: params
 
       # Create session object and save it
@@ -139,7 +139,7 @@ class Api
 
     ajaxSetup =
       type: 'POST'
-      url: "#{config.widget.api}/v2/apps/#{app}/captcha/#{dispatchType}"
+      url: "#{config.api}/v2/apps/#{app}/captcha/#{dispatchType}"
       data: params
 
     # Update data
@@ -184,7 +184,7 @@ class Api
     # Setup AJAX request
     ajaxSetup =
       type: 'POST'
-      url: "#{config.widget.api}/v2/apps/#{app}/check"
+      url: "#{config.api}/v2/apps/#{app}/check"
       data:
         token: @data.token
         fp: @data.fingerprint ? fingerprint.getFingerprint()
@@ -221,7 +221,7 @@ class Api
     # Setup AJAX request
     ajaxSetup =
       type: 'POST'
-      url: "#{config.widget.api}/v2/apps/#{app}/check/url"
+      url: "#{config.api}/v2/apps/#{app}/check/url"
       data:
         token: @data.token
         fp: @data.fingerprint ? fingerprint.getFingerprint()

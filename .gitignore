@@ -1,3 +1,4 @@
 build/
 node_modules/
+aws.json
 config.json

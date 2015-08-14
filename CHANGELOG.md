@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.0
+-------
+
+ * 1c4139c: Replace Sass by LESS (Diego Saint Esteben)
+ * ca4344f: Separate aws and widget config (Diego Saint Esteben)
+
 v2.17.0
 -------
 

@@ -126,7 +126,12 @@ class Api
       phone: phoneNumber
       locale: locale
 
-    if 'G' in @data.features and @data.geolocation is true
+    if options.geolocation?
+      geoEnabled = options.geolocation
+    else
+      geoEnabled = true
+
+    if 'G' in @data.features and @data.geolocation is true and geoEnabled
       params = $.extend(params, geolocation.getGeolocation())
 
     if @mode

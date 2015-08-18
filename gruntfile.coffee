@@ -3,6 +3,7 @@ Define tasks.
 ###
 module.exports = (grunt) ->
 
+  pkg = grunt.file.readJSON('package.json');
   config = grunt.file.readJSON('config.json')
   aws = grunt.file.readJSON('aws.json')
 
@@ -11,7 +12,7 @@ module.exports = (grunt) ->
     ###
     Build banner.
     ###
-    banner: "/* Widget compiled at #{new Date().toUTCString()} */\n"
+    banner: "/* Widget #{pkg.version} */\n"
 
     ###
     Compile stylesheets.

@@ -123,7 +123,12 @@ class Widget
     else
       currentStep.setup()
 
-    if 'G' in api.data.features and api.data.geolocation
+    if options.geolocation?
+      geoEnabled = options.geolocation
+    else
+      geoEnabled = true
+
+    if 'G' in api.data.features and api.data.geolocation and geoEnabled
       geolocation.askGeolocation()
 
     setToken(api.data.token)

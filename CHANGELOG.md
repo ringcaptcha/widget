@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.1
+-------
+
+ * 05b48f8: Fixed css (Diego Saint Esteben)
+
 v2.18.0
 -------
 

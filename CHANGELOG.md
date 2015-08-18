@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.2
+-------
+
+ * ca58657: Keep the same checksum regardless of the compilation time (Diego Saint Esteben)
+ * 62acb13: Added option to enable or disable geolocation (Diego Saint Esteben)
+
 v2.18.1
 -------
 

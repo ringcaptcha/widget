@@ -50,6 +50,6 @@
         "error.url_validation_not_available": "Url validering inte tillgängligt",
         "error.unknown_error": "Okänt fel",
         "error.max_validations_reached": "Max valideringar nått",
-        "error.out_of_credits": "Opps.. Vi kunde inte verifiera din mobiltelefon.",
+        "error.out_of_credits": "Opps.. Vi kunde inte verifiera din mobiltelefon."
     }
 }

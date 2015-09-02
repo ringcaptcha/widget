@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.3
+-------
+
+ * dcb23ab: Fixed invalid locales (Diego Saint Esteben)
+
 v2.18.2
 -------
 

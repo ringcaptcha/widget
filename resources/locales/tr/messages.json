@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Url doğrulama mevcut değil",
         "error.unknown_error": "Bilinmeyen hata",
         "error.max_validations_reached": "Max doğrulamalarını ulaştı",
-        "error.out_of_credits": "Opps cep telefonunuzu doğrulamak edemedim..."
+        "error.out_of_credits": "Opps cep telefonunuzu doğrulamak edemedim...",
+        "error.duplicated_number": "Bu sayı zaten doğrulandı. Başka biriyle tekrar deneyin."
     }
 }

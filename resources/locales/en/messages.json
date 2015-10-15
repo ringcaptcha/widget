@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Url validation not available",
         "error.unknown_error": "Unknown error",
         "error.max_validations_reached": "Max validations reached",
-        "error.out_of_credits": "Opps.. We couldn´t verify your mobile phone."
+        "error.out_of_credits": "Opps.. We couldn´t verify your mobile phone.",
+        "error.duplicated_number": "That number has already been verified. Please try again with another one."
     }
 }

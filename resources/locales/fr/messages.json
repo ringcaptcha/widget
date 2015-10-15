@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Validation URL non disponible",
         "error.unknown_error": "Erreur inconnue",
         "error.max_validations_reached": "Limite de validations atteinte",
-        "error.out_of_credits": "Oops .. Nous n'avons pas pu vérifier votre téléphone mobile."
+        "error.out_of_credits": "Oops .. Nous n'avons pas pu vérifier votre téléphone mobile.",
+        "error.duplicated_number": "Ce nombre a déjà été vérifiée. S'il vous plaît essayer à nouveau avec l'autre."
     }
 }

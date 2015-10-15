@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Url validatie niet beschikbaar",
         "error.unknown_error": "Onbekende fout",
         "error.max_validations_reached": "Max validaties bereikt",
-        "error.out_of_credits": "Opps.. We couldnt controleren of uw mobiele telefoon."
+        "error.out_of_credits": "Opps.. We couldnt controleren of uw mobiele telefoon.",
+        "error.duplicated_number": "Dat aantal is al geverifieerd. Probeer het opnieuw met een ander."
     }
 }

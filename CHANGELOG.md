@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.4
+-------
+
+ * cfc7cae: Updating messages with missing error text for duplicated numbers (those that are not allowed more verifications) (Martin Cocaro)
+
 v2.18.3
 -------
 

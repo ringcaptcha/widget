@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Urlの検証不可",
         "error.unknown_error": "不明エラー",
         "error.max_validations_reached": "最大検証に達した",
-        "error.out_of_credits": "Oppsし、盗の認証を携帯電話ます。"
+        "error.out_of_credits": "Oppsし、盗の認証を携帯電話ます。",
+        "error.duplicated_number": "その数はすでに確認されています。別のものでやり直してください。"
     }
 }

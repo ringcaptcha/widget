@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "统一资源定位地址鉴定没有",
         "error.unknown_error": "未知的错误",
         "error.max_validations_reached": "麦克斯进行的鉴定达成",
-        "error.out_of_credits": "惨了...我们不能核查你的移动电话。"
+        "error.out_of_credits": "惨了...我们不能核查你的移动电话。",
+        "error.duplicated_number": "这个数字已经过验证。请用另一重试。"
     }
 }

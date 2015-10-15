@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Проверка по URL недоступна",
         "error.unknown_error": "Ошибка",
         "error.max_validations_reached": "Максимальные попытки исчерпаны",
-        "error.out_of_credits": "Ой.. Мы couldn't проверить свой мобильный телефон."
+        "error.out_of_credits": "Ой.. Мы couldn't проверить свой мобильный телефон.",
+        "error.duplicated_number": "Это число уже проверено. Пожалуйста, попробуйте еще раз с другой."
     }
 }

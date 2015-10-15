@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "La convalida degli Url non disponibile",
         "error.unknown_error": "Errore sconosciuto",
         "error.max_validations_reached": "Max convalide raggiunto",
-        "error.out_of_credits": "Opps.. non Abbiamo potuto verificare il tuo telefono cellulare."
+        "error.out_of_credits": "Opps.. non Abbiamo potuto verificare il tuo telefono cellulare.",
+        "error.duplicated_number": "Quel numero è già stato verificato. Riprova con un altro."
     }
 }

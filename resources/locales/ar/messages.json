@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "التحقق من صحة الرابط غير متوفرة",
         "error.unknown_error": "خطأ غير معروف",
         "error.max_validations_reached": "لقد بلغت الحد الأقصى من التثبت",
-        "error.out_of_credits": "انتبه .. نحن تعذر التحقق من هاتفك المحمول."
+        "error.out_of_credits": "انتبه .. نحن تعذر التحقق من هاتفك المحمول.",
+        "error.duplicated_number": "وإذا تم التحقق من هذا العدد. يرجى المحاولة مرة أخرى مع بعضها البعض."
     }
 }

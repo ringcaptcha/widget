@@ -50,6 +50,7 @@
         "error.url_validation_not_available": "Url-überprüfung nicht verfügbar",
         "error.unknown_error": "Unbekannter Fehler",
         "error.max_validations_reached": "Max Validierungen erreicht",
-        "error.out_of_credits": "Upps.. konnten Wir nicht überprüfen Sie Ihre Handy."
+        "error.out_of_credits": "Upps.. konnten Wir nicht überprüfen Sie Ihre Handy.",
+        "error.duplicated_number": "Diese Zahl wurde bereits überprüft. Bitte versuchen Sie es mit einer anderen."
     }
 }

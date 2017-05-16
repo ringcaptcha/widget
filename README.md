@@ -25,6 +25,18 @@ Do you want to contribute? We have [a guide](CONTRIBUTING.md) that explains our 
 
  * Node.js 0.10+
 
+### Preparation
+
+Before building, customize the bundle:
+* cp config.json.dist config.json
+* Edit config.json
+  * Change 'cdn' to point to 'http://localhost:4001' which is where we will deploy new code/changes
+  * Change other config if required, e.g., 'locale' if you're adding a new locale, 'api' if you want to use dev api, etc.
+
+If you're deploying to aws, customize:
+* cp aws.json.dist aws.json
+* Edit aws.json
+
 ### Building
 
 Once you have your [environment setup](#requirements) ready, building the widget is really easy.
@@ -43,6 +55,14 @@ To run the entire test suite, execute the following command:
 ```sh
 $ npm test
 ```
+
+Acknowledgements
+----------------
+
+# Localization
+
+* Serbian (SR) - Srđan Šajin
+* Bulgarian (BG) - Petko Petkov
 
 License
 -------

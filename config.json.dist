@@ -3,6 +3,6 @@
   "cdn": "http://mycdn.com",
   "locale": {
     "default": "en",
-    "available": ["en", "es", "gr", "fr", "ar", "pt", "ru", "it", "de", "nl", "sv", "tr", "fi", "ja", "zh"]
+    "available": ["bg", "en", "es", "gr", "fr", "ar", "pt", "ru", "it", "de", "nl", "sr", "sv", "tr", "fi", "ja", "zh"]
   }
 }

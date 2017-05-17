@@ -36,8 +36,8 @@ git checkout -f -b release-$version
 echo "Summarizing changes in CHANGELOG.md file..."
 
 changes=$(git log $latest...HEAD --no-merges --reverse --pretty=format:" * %h: %s (%an)")
-header=$(head CHANGELOG.md -n 5)
-tail=$(tail CHANGELOG.md -n +5)
+header=$(head -n 5 CHANGELOG.md)
+tail=$(tail -n +5 CHANGELOG.md)
 title=$(underline $version)
 
 {

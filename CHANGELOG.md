@@ -3,6 +3,14 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.5
+-------
+
+ * fe5e74a: Create sr (helenhwy)
+ * 1e71c4e: Delete sr (helenhwy)
+ * 8163b1b: Add Bulgarian and Serbian, and update README (khor)
+ * 0cd3dc0: Add "bg", and "sr" to config.json.dist (khor)
+
 v2.18.4
 -------
 

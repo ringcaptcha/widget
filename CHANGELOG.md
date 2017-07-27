@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.6
+-------
+
+ * 99efcf5: Make prepare-release script compatible with mac osx (khor)
+ * 6dedebc: Fix mobile CSS (Makoto Saito)
+
 v2.18.5
 -------
 

@@ -63,6 +63,7 @@ Acknowledgements
 
 * Serbian (SR) - Srđan Šajin
 * Bulgarian (BG) - Petko Petkov
+* Farsi (FA) - Mojtaba Ahmadpour
 
 License
 -------

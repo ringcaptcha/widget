@@ -3,6 +3,17 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+release-v2.18.7
+---------------
+
+ * 021dc7e: Add tmp recaptcha bundle (khor)
+ * 8c3b31e: Add farsi locale (Thanks to: Mojtaba Ahmadpour) (Makoto Saito)
+ * fcce688: Update sample config.json to add 'fa' (Makoto Saito)
+ * 7a04391: Remove padding-right for rtl locales (Makoto Saito)
+ * 5f29ced: Add credits to the localization author on README.md (Makoto Saito)
+ * 07a181a:   Modify Japanese translation (Takashi Kinoshita)
+ * 25aaf79:   Delete extra word for Japanese translation (Takashi Kinoshita)
+
 v2.18.6
 -------
 

@@ -3,6 +3,11 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.8
+-------
+
+ * 719bf71: Fix pin input over-aligning to the right especially in mobile (khor)
+
 release-v2.18.7
 ---------------
 

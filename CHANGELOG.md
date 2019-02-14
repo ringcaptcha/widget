@@ -3,6 +3,12 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.9
+-------
+
+ * 5f2dd75: Create messages.json (anhtu0912)
+ * c7b7dc7: Add Vietnamese (VN) - Nguyễn Anh Tú to Acknowledgements (Takashi Kinoshita)
+
 v2.18.8
 -------
 

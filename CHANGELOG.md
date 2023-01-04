@@ -3,6 +3,20 @@ CHANGELOG
 
 This changelog references the relevant changes to this project.
 
+v2.18.10
+--------
+
+ * 5a689ff: Add Romanian locale (Tangol)
+ * 9395dfc: Add Ukrainian language (emusabaev)
+ * f7c839b: small fix for RO locale (emusabaev)
+ * dffaadf: Add Acknowledgements for UA and RO locales (emusabaev)
+ * ddb646e: Update config example file (emusabaev)
+ * 67830ba: Update Dominican Republic country codes (emusabaev)
+ * 0b5153b: Update dependencies (emusabaev)
+ * 920153e: Update RC logo (emusabaev)
+ * 914b24e: Update widget styles (emusabaev)
+ * 26b5d2c: Fix mistakes in locales (emusabaev)
+
 v2.18.9
 -------
 

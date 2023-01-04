@@ -29,6 +29,9 @@ a, span, strong { display: inline; }
 .powered {
   background: url('../images/brand-small.png') no-repeat;
   color: transparent;
+  width: 85px;
+  display: inline-block;
+
   &:hover {
     color: transparent;
   }
@@ -81,7 +84,7 @@ a {
 .has-error {
   border-color: @brand-danger;
 
-  p {
+  .summary {
     color: @brand-danger;
   }
 
@@ -205,10 +208,10 @@ a {
 
   img {
     display: block;
-    width: 95px;
+    width: 119px;
     height: 21px;
-    background: url('../images/sprite.png') no-repeat;
-    background-position: 0 -177px;
+    background: url(../images/sprite.png) no-repeat;
+    background-position: -128px -176px;
   }
 }
 
@@ -263,7 +266,7 @@ a {
     }
   }
 
-  .wizard-code-step {
+  .wizard-code-step, .wizard-credentials-step  {
     .row;
     .wizard-step;
 
@@ -379,10 +382,10 @@ a {
 
     .wizard-step-content {
       background-color: #ebf0f2;
-      width: 100%;
+      width: 125%;
       text-align: center!important;
       padding: (7px - 3.5px) 0 7px;
-      margin: 5px 0 5px 0;
+      margin: 5px 0 5px @widget-padding-left-base * -1;
       .box-sizing(border-box);
 
       & > div {
@@ -488,4 +491,191 @@ a {
   border-top-color: #dfe4e6;
   border-width: 6px;
   margin-left: -6px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.form-field {
+  margin: 9px 0px;
+}
+
+.digit {
+  width: 36px;
+  text-align: center !important;
+  display: inline;
+  border: 1px solid #dfe4e6;
+  font-size: 0.929em;
+
+  .input-size(36px, 5px, 5px, 14px, 0, 4px);
+
+  &:focus {
+    border-color: #88939a;
+  }
+
+  &[disabled] {
+    background-color: lighten(#dfe4e6, 9%);
+  }
+}
+
+.wizard-credentials-content {
+  .phone-box {
+    float: none !important;
+    margin: 0px !important;
+
+    .method-selector {
+      text-align: center;
+      float: none !important;
+      margin-top: 12px !important;
+
+      .method-summary {
+        width: auto !important;
+        padding-right: 0px !important;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    .status-message {
+      margin-top: 14px;
+      text-align: center;
+    }
+
+    .pin-verification {
+      margin-top: 14px;
+
+      .pin-inputs {
+        display: flex;
+        justify-content: center;
+      }
+
+      .js-try-again, .js-call-now {
+        cursor: pointer;
+      }
+    }
+
+    .footer {
+      margin: 7px 0px;
+      text-align: center;
+    }
+  }
+
+  .start-over-summary {
+    text-align: center;
+
+    .start-over {
+      font-weight: bold;
+      cursor: pointer;
+      color: blue;
+    }
+  }
+
+  .signup-status, .login-status {
+    text-align: center;
+  }
+
+  .error-message {
+    text-align: center;
+    color: red;
+  }
+
+  .update-error-message {
+    text-align: center;
+    color: red;
+  }
+
+  .footer-menu {
+    .status-message {
+      text-align: center;
+    }
+
+    button {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.wizard-credentials-step .wizard-step-header {
+  float: none !important;
+}
+
+.field-checkbox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.checkbox-field-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.field-checkbox label {
+  width: 100%;
+}
+
+.field-checkbox input{
+  width: 15px;
+  height: 15px;
+}
+
+.field-checkbox label{
+  font-weight:normal;
+  margin-left: 2%;
+}
+
+.field-radio-group input{
+  width: 8%;
+}
+
+.field-radio-group label{
+  width: 92%;
+}
+
+.field-radio-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.radio-group-field-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-top: 7px;
+
+  label {
+    margin: 0;
+    font-size: 10.5px;
+    font-weight: normal;
+  }
+
+  input {
+    margin: 0;
+  }
+}
+
+.field-radio-group fieldset{
+  padding: 10px;
+  height: 100%;
+}
+
+#passwordReset, #magicLink {
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert {
+  color: @brand-danger;
+
 }

@@ -1,6 +1,6 @@
 {
   "name": "ringcaptcha-widget",
-  "version": "2.18.9",
+  "version": "2.18.10",
   "description": "A JavaScript based two-step verification widget.",
   "author": "Diego Saint Esteben <diego@ringcaptcha.com>",
   "scripts": {
@@ -19,6 +19,9 @@
     "verification",
     "onboard"
   ],
+  "overrides": {
+    "graceful-fs": "^4.2.10"
+  },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "cssify": "^0.4.2",

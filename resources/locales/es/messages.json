@@ -50,7 +50,7 @@
         "error.url_validation_not_available": "Valicación por URL no disponible",
         "error.unknown_error": "Error desconocido",
         "error.max_validations_reached": "Máximos intentos alcanzados",
-        "error.out_of_credits": "Opps.. No hemos podido verificar tu número.",
+        "error.out_of_credits": "Ups... No hemos podido verificar tu número.",
         "error.duplicated_number": "Ese número ya ha sido verificada. Por favor, inténtelo de nuevo con otra."
     }
 }

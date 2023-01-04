@@ -50,7 +50,7 @@
         "error.url_validation_not_available": "Validação por URL indisponível",
         "error.unknown_error": "Erro desconhecido",
         "error.max_validations_reached": "Máximo de tentativas alcançadas.",
-        "error.out_of_credits": "Opps .. Nós não poderia verificar o seu telemóvel.",
+        "error.out_of_credits": "Oops... Nós não poderia verificar o seu telemóvel.",
         "error.duplicated_number": "Esse número já foi verificado. Por favor, tente novamente com outro."
     }
 }

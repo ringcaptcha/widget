@@ -1361,24 +1361,12 @@ module.exports =
       es: 'Zimbabwe'
     country_code: 263
     example_dial: '013 12345'
-  'do-1':
+  do:
     country_name:
       en: 'Dominican Republic'
       es: 'República Dominicana'
-    country_code: 1849
+    country_code: 1
     example_dial: '(849) 234-5678'
-  'do-2':
-    country_name:
-      en: 'Dominican Republic'
-      es: 'República Dominicana'
-    country_code: 1809
-    example_dial: '(809) 234-5678'
-  'do-3':
-    country_name:
-      en: 'Dominican Republic'
-      es: 'República Dominicana'
-    country_code: 1829
-    example_dial: '(829) 234-5678'
   gw:
     country_name:
       en: 'Guinea-Bissau'

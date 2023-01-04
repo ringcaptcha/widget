@@ -50,7 +50,7 @@
         "error.url_validation_not_available": "Url validointi ei saatavilla",
         "error.unknown_error": "Tuntematon virhe",
         "error.max_validations_reached": "Max arvioinnissa saavutettu",
-        "error.out_of_credits": "Opps.. Me couldnt tarkista matkapuhelimesi.",
+        "error.out_of_credits": "Oops... Me couldnt tarkista matkapuhelimesi.",
         "error.duplicated_number": "Tämä määrä on jo vahvistettu. Yritä uudelleen toisella."
     }
 }

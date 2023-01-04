@@ -65,6 +65,8 @@ Acknowledgements
 * Bulgarian (BG) - Petko Petkov
 * Farsi (FA) - Mojtaba Ahmadpour
 * Vietnamese (VN) - Nguyễn Anh Tú
+* Romanian (RO) - Tangol
+* Ukrainian (UA) - Sergey Rezunenko
 
 License
 -------

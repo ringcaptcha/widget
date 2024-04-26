@@ -6,7 +6,7 @@ This changelog references the relevant changes to this project.
 v2.18.11
 --------
 
- * 24334fc: Add Polish language (Emil Musabaev)
+ * 24334fc: Add Polish language (emusabaev)
 
 v2.18.10
 --------

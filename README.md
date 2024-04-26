@@ -67,6 +67,7 @@ Acknowledgements
 * Vietnamese (VN) - Nguyễn Anh Tú
 * Romanian (RO) - Tangol
 * Ukrainian (UA) - Sergey Rezunenko
+* Polish (PL) - Tomek S.
 
 License
 -------
